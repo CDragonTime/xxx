@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 复合选择器，位置不能改变 */
+        div.box{
+            background-color: green;
+        }
+        /* 并集选择器，也叫分组选择器 */
+
+        p,div.test{
+            background-color: yellow;
+        }
+
+        /* 后代选择器 */
+        .hello span{
+            background-color: blue;
+        }
+
+        /* 伪类选择器,鼠标放在上面会变化*/
+        a:hover{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">div的class</div>
+    <div class="test">div的test</div>
+    <h1 class="box">h标签的class</h1>
+    <div class="hello">
+        <span id="son">span</span>
+    </div>
+    <p>p标签</p>
+    测试热部署
+    <a href="">百度一下</a>
+</body>
+</html>
+<script>
+    var i = 100;
+    while(i > 0){
+        // alert("测试打印"+i);
+        console.log("测试"+i)
+        i--;
+    }
+</script>
+
+<!-- 
+选择器
+    基本选择器
+        标签选择器
+        class类选择器
+        ID选择器
+        通配符选择器
+
+    复合选择器
+        交集选择器
+        并集选择器
+        后代选择器
+
+    伪类选择器
+        class叫做类选择器   伪类就是不存在这样一个类
+        :hover 鼠标放上去的状态
+ -->
+

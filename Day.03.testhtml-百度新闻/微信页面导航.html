@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .header{
+        background-color: #000000;
+        width: 1200px;
+    }
+    ul{
+        float: right;
+        margin-top: 70px;
+    }
+
+    li{
+        /* 导航浮动显示 */
+        /* background-color: #ccccff; */
+        width: 80px;
+        float: left;
+        list-style: none;
+        /* border: 1px red  solid; */
+        /* 应该在此设置文字居中 */
+        text-align: center;
+        /* background-color: gray; */
+    }
+    /* 后代选择器 */
+    li a{
+        /* 设成和li标签中的一样高，文字就在竖直方向上居中了 */
+        line-height: 30px;
+        font-size: 18px;
+        text-decoration: none;
+        color: greenyellow;
+    }
+    li a:hover{
+        border: grey solid 1px;
+        /* border-width: 105px; */
+        
+    }
+    .test1{
+        font-weight: bold;
+        /* 这是文字下划线 */
+        /* text-decoration: underline; */
+        border-bottom: solid skyblue 3px;
+    }
+    .father{
+        color: grey;
+    }
+    /* 注意后代选择器加上空格   后面的语法还是和前面的一样class和id选择器都需要在写 */
+    .father .son{
+        color: hotpink;
+    }
+    .father .son:hover{
+        font-size: larger;
+        color: #000;
+        border: black 2px solid;
+    }
+</style>
+<body>
+    <div class="header">
+            <img src="./img/1.png" alt="微信图片" width="280" height="100">
+            <ul>
+                <li class="test1"><a href="">首页</a></li>
+                <li><a href="">帮助</a></li>
+                <li><a href="">公众</a></li>
+                <li><a href="">首页</a></li>
+                <li><a href="">首页</a></li>
+                <li><a href="">首页</a></li>
+                <li><a href="">首页</a></li>
+                <li><a href="">更多>></a></li>
+            </ul>
+    </div>
+
+    <div class="father">father
+        <div class="son">son</div>
+    </div>
+</body>
+</html>
+<!-- 
+    选择器
+        标签选择器
+        id选择器
+        类选择器
+        通配符选择器
+        后代选择器
+        分组选择器
+        伪类选择器
+ -->

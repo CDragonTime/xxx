@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            height: 120px;
+            background-color: #000;
+        }
+        .logo{
+            height: 120px;
+            line-height: 120px;
+            color: #fff;
+            font-style: 30px;
+            float: left;
+        }
+        .menu{
+            height: 120px;
+            line-height: 120px;
+            color: #fff;
+            font-style: 24px;
+            float: right;
+        }
+
+        /* 用通配符选择器去掉所有默认边框 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 让行级标签并排显示:浮动 -->
+    <!-- 默认情况下，标签都有margin和padding -->
+    <div class="header">
+        <h1 class="logo">这是一个logo</h1>
+        <p class="menu">菜单</p>
+    </div>
+</body>
+</html>
+<!-- 开发者工具
+    选择元素    elements
+    开发者工具调试时，调试的结果仅仅是临时的，刷新就没有了
+-->

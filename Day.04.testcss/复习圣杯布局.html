@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复习圣杯布局</title>
+    <style>
+        .box{
+            border: green solid 1px;
+            width: 1000px;
+            height: 600px;
+            /* 水平居中 */
+            margin: 0 auto;
+        }
+        .header{
+            background-color: blue;
+            height: 50px;
+        }
+        .left{
+            background-color: blueviolet;
+            height: 500px;
+            width: 100px;
+            float: left;
+        }
+        .center{
+            background-color:brown;
+            height: 500px;
+            width: 800px;
+            float: left;
+        }
+        .right{
+            background-color: chocolate;
+            height: 500px;
+            float: left;
+            width: 100px;
+        }
+        .footer{
+            background-color: yellow;
+            height: 50px;
+            /* 清除上面浮动元素的影响 */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <table width="1000px" height="500px" border="1">
+        <tr>
+            <td colspan="3" style="background-color: aqua;height: 100px;">header</td>
+        </tr>
+        <tr>
+            <td style="background-color: blue; width: 100px;">left</td>
+            <td style="background-color: purple; width: 800px;">center</td>
+            <td style="background-color: yellow; width: 100px;">right</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="background-color: green; width: 1000px;height: 100px;">footer</td>
+        </tr>
+    </table>
+<hr size="2px">
+<hr size="2px">
+<hr size="2px">
+<hr size="2px">
+<hr size="2px">
+    <div class="box">
+        <div class="header">header</div>
+        <div class="left">left</div>
+        <div class="center">center</div>
+        <div class="right">right</div>
+        <div class="footer">footer</div>
+    </div>
+
+
+</body>
+</html>

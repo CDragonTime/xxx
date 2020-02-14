@@ -1,0 +1,11 @@
+/* 
+基本语法
+div{样式}  div叫选择器 {}里面放羊式
+ */
+
+
+ div{
+     width: 100px;
+     height: 100px;
+     background-color: red;
+ }

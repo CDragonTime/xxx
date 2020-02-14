@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-style: italic;
+            text-indent: -100px;
+        }
+        h2{
+            /* 虽然大小设置1px，但浏览器会处理为保证肉眼可见 */
+            /* 设置非常大就看不见了,通常是12px  14px  16px */
+            font-size: 1px;
+        }
+        h3{
+            font-weight: normal;
+        }
+        h4{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        h5{
+            color: lawngreen;
+        }
+        .test{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+        }
+        .father{
+            height: 100px;
+            width: 100px;
+            color: rgb(233, 17, 82);
+            font-size: 22px;
+            font-weight: 1;
+        }
+        .item{
+            /* 复制上一行  shift + alt + ↓ */
+            /* 最后一行生效 */
+            text-decoration: underline;
+            text-decoration: overline;
+            text-decoration: line-through;
+        }
+        a{
+            color: #11e947;
+            /* 去除a标签中的默认下划线 */
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(0, 0, 0);
+            text-decoration: line-through;
+        }
+
+        
+        .item2{
+            /* text-indent: 2em; */
+            /* font-size: 20px; */
+            /* text-indent: 50px; */
+
+            font-size: 16px;
+            text-indent: -45px;
+        }
+    </style>
+</head>
+<body>
+    <h1>font-style用来设置字体是否倾斜</h1>
+    <h2>font-size设置字体的大小</h2>
+    <h3>font-weight设置字体的粗细</h3>
+    <h4>font-family设置字体格式</h4>
+    <h5>color字体的颜色</h5>
+    <h1 class="test"> font-family设置字体格式         C盘windows文件夹里 fonts文件夹里有的，
+        可以设置多个字体用，隔开，如果字体都没有就显示宋体</h1>
+
+        <div class="father">
+            father
+            <div class="son">son
+            </div>
+        </div>
+           <!-- <div class="item1">百度一下</div> -->
+           <a href="">百度一下</a>
+        <div class="item">
+            text-decoration
+        </div>
+        <div class="item1">
+            测试图片
+            <h1><img src="./xx.png"/>淘宝网</h1>
+        </div>
+        <div class="item2">设置文本缩进设置文本缩进设置文本缩进设置文本缩进字测试汉字测试汉字测试汉字
+            测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字
+            测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字测试汉字 enttext
+            -intenttext-intenttext-intenttext-intenttext-intenttext-intenttext-intent</div>
+
+        <div class="item3">text-align：设置文本的对齐方式，默认是左对齐</div>
+</body>
+</html>
+<!-- 
+    文本的样式：
+        font-size设置字体的大小
+        font-style设置字体的样式    常用的值 italic(倾斜) normal（默认）
+        font-weight设置字体的粗细       有时候需要把h1不加粗  font-weight = normal
+        font-family设置字体格式         C盘windows文件夹里 fonts文件夹里有的，
+                                        可以设置多个字体用，隔开，如果字体都没有就显示宋体
+        color字体的颜色
+
+
+        text-decoration：设置文本的修饰线     none（默认没有）  underline下划线     overline上划线  line-through删除线
+        text-indent：设置文本的缩进         首行空两个汉字 em 一个em表示一个汉字的宽度
+        text-align：设置文本的对齐方式      左对齐      右对齐      居中对齐
+        line-height：行高
+ -->
+ <!-- css有两大特性：
+        css的继承性：有些属性在父中设置的属性子中也起作用:
+        font-size  font-style   font-weight     font-family color
+ -->
