@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 导航栏start */
+        .test{
+            background-color: white;
+        }
+        .test1{
+            width: 960px;
+            height: 73px;
+            margin: 0 auto;
+            /* background-color: #E65224; */
+        }
+        ul{
+            margin-left: 2px;
+            
+        }
+        li{
+            list-style: none;
+            float: left;
+            margin: 0 52px 0 0;
+        }
+        a{
+            color: #4d4d4d;
+            line-height: 73px;
+            font-size: 12px;
+            font-family:Arial, Helvetica, sans-serif;
+            text-decoration: none;
+        }
+        .test .test1 .set{
+            color: #E65224;
+        }
+        .test .test1 .test2{
+            margin-left: 126px;
+        }
+        /* 导航栏end */
+
+
+        /* logo的start */
+        .header{
+            background-color: #E65224;
+            height: 83px;
+        }
+        .header .img{
+            padding: 26px 0 0 317px;
+        }
+
+        .header .img .phoneLi{
+            float: right;
+            font-weight: bolder;
+            color: white;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-right: 207px;
+        }
+        .header .img .img2{
+            float: right;
+        }
+
+        .header .img .phoneLi .padding{
+            padding-top: 3px;
+        }
+        /* logo的end */
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img">
+            <img src="./img/11.png" alt="" height="34px">
+    
+            
+            <ul class="phoneLi">
+                <li>财富热线</li><br>
+                <li class="padding">10086-10010</li>
+            </ul>
+            <img class="img2" src="./img/phone.png" alt="">
+
+        </div>
+    </div>
+    <!-- 导航栏start -->
+    <div class="test">
+        <div class="test1">
+            <ul>
+                <li class="test2"><a href="" class="set">首页    </a></li>
+                <li><a href="">关于利牛</a></li>
+                <li><a href="">行业资讯</a></li>
+                <li><a href="">主要业务</a></li>
+                <li><a href="">安全保障</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 导航栏end -->
+    <!-- 盒子里面的内容浮动，盒子就塌陷了，高度就为0了 -->
+</body>
+<!-- 
+    1.什么是css？
+    层叠样式表
+    作用：美化，布局
+    先学习css2
+    2.选择器？
+        基本选择器： id  class  标签
+        复合选择器： div.item    div,item   div item
+        伪类选择器： ：hover
+    3.关于文字和文本的属性
+        font-size
+        font-family
+        font-weight
+        font-style
+        color
+        text-decoration
+        text-indent
+        text-align
+        line-height
+    4.CSS继承性和层叠性
+        继承性：font-  text-   color   line-height
+        层叠性：
+            行内》内部=外部（就近原则）
+            id》class》标签
+            自己身上有的》继承过来的
+            权重 id 100    class 10   标签 1
+            书写顺序  后面的》前面的
+    5.html中标签的分类？
+        块级标签   可以设置宽高    独占一行
+            ···
+        行内标签   不能设置宽高    并排显示
+            span a   i   em    b   strong
+        行内块标签   可以设置宽高   并排显示
+            img   input
+ -->
+</html>

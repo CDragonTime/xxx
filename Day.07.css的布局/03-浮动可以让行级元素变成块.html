@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 没有设置宽度，宽度就是父元素的100% */
+            width: 200px;
+            height: 200px;
+            border: 3px solid red;
+        }
+        .son{
+            /* 没有设置宽度，宽度就是父元素的100% */
+            /* 浮动以后，行级标签可以设置宽高并有效 */
+            width: 60px;
+            height: 60px;
+
+            float: left;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="son">son</span>
+    </div>
+</body>
+</html>
+<!-- 
+    浮动可以让行内标签变为块级标签，一个行级标签浮动了
+    也就是变成了块级标签，可以设置宽度和高度
+ -->

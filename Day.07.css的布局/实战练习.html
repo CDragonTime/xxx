@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仿造利牛</title>
+    <!-- 先定一些常用的样式
+            主要分两类：
+            清除默认的样式：通常会新建一个css文件，叫reset.css
+            页面中通用的样式：也会新建一个叫common.css的文件
+    -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        /* --------------------------logo的start */
+        /* 写样式从外往里写 */
+        .logo {
+            background-color: #e65224;
+            height: 78px;
+            /* 108 -30 去掉padding */
+            padding-top: 30px;
+        }
+
+        .logo ul {
+            color: white;
+            font-weight: bold;
+        }
+
+        .logo ul h1 a {
+            /* 图片没有出来，原因是 没有设置宽度和高度 */
+            background-image: url("./img/11.png");
+            display: block;
+            width: 180px;
+            height: 42px;
+            text-indent: -1000px;
+        }
+
+        /* --------------------------logo的end */
+        /* -------------------------nav的start */
+        /* .nav{
+        } */
+        .nav ul {
+            height: 80px;
+            /* 仅仅是导航栏整体浮动 没有导航浮动的效果 */
+            /* float: left; */
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav .front {
+            padding-left: 18px;
+            color: #e65224;
+        }
+
+        .nav a {
+            /* font的一般设置顺序 font:italic bold 12px/20px arial,sans-serif;
+            font-style
+            font-variant
+            font-weight
+            font-size/line-height
+            font-family
+            ******需要注意原页面的放大倍数
+            */
+            color: #4d4d4d;
+            font: normal 16px arial, sans-serif;
+            line-height: 80px;
+            padding-right: 70px;
+        }
+
+        .nav a:hover {
+            color: #e65224;
+        }
+
+        /* -------------------------nav的end */
+
+
+        /* ---------------------------小广告的start */
+        .picture {
+            width: 320px;
+            height: 160px;
+        }
+        .promise img {
+            float: left;
+            margin: 39px 12px 0px 5px;
+        }
+        .promise dt{
+            font: 20px 微雅软黑;
+            margin-top: 39px;
+        }
+        .promise dd{
+            color: #696969;
+            font: 12px 微雅软黑;
+            margin-top: 4px;
+        }
+        .promise .center{
+            margin-left: 50px;
+        }
+        .promise .right{
+            margin-left: 66px;
+        }
+        /* ---------------------------小广告的end */
+
+        /* ---------------------主要业务的start */
+        .business{
+            clear: both;
+            height: 394px;
+        }
+        .business .set{
+            height: 30px;
+            width: 303px;
+            margin: auto auto;
+            padding-top: 26px;
+            height: 82px;
+            /* border: darkgreen 1px solid; */
+        }
+        .photo li{
+            float: left;
+            width: 225px;
+        }
+        .photo h4{
+            padding-top: 20px;
+            color: #ff6537;
+            font: 16px 微雅软黑;
+        }
+        .photo p{
+            padding-top: 3px;
+            color: #9f9f9f;
+            font: normal 14px 微雅软黑;
+            line-height: 25px;
+        }
+        .p1,.p2,.p3{
+            margin-right: 20px;
+        }
+        /* ---------------------主要业务的end */
+
+        /*  */
+        .about{
+            font: normal 20px;
+            color:#ffffff;
+            background-image: url(./img/关于我们.jpg);
+            height: 194px;
+            /* border: solid 1px green; */
+            text-align: center;
+        }
+        .about h3{
+            padding-top: 34px;
+        }
+        .about p{
+            margin-top: 33px;
+            font: normal 14px "微雅软黑";
+            width: 559px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 32px;
+        }
+        /*  */
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- logo区域 start -->
+        <div class="logo">
+            <ul class="w960">
+                <li class="fl">
+                    <!-- 一般网站的logo都是使用h1标签 h1标签里面包一个a标签 -->
+                    <!-- a标签中放img，这个logo也可是背景图片 -->
+                    <h1>
+                        <!-- logo是图片，一般会加上文字，目的为了SEO 就是以图换字 -->
+                        <a href="">利牛网</a>
+                    </h1>
+                </li>
+                <li class="fr">
+                    <!-- alt也要写上去，也是有利于SEO -->
+                    <img class="fl" src="./img/phone.png" alt="phone">
+                    <div class="fr">
+                        <p>财富热线</p>
+                        <p>1234568790</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- logo区域 end -->
+
+        <!-- 导航区 start -->
+        <div class="nav w960">
+            <ul>
+                <!-- 换行也会有默认间距 -->
+                <li><a class="front" href="">首页</a></li>
+                <li><a href="">关于利牛</a></li>
+                <li><a href="">行业资讯</a></li>
+                <li><a href="">主要业务</a></li>
+                <li><a href="">安全保障</a></li>
+            </ul>
+        </div>
+        <!-- 导航区 end -->
+
+        <!-- 轮播图区域 start -->
+        <div class="slideshow w960">
+            <img src="./img/9}IJD_P646`ME~XN3MK~T9F.png" alt="轮播图">
+        </div>
+        <!-- 轮播图区域 end -->
+
+        <!-- 三个小广告 start -->
+        <div class="promise w960">
+            <div class="picture fl">
+                <img src="./img/1.jpg" alt="小广告的第一个图片">
+                <dl>
+                    <dt>稳定高收益</dt>
+                    <dd>40倍银行活期存款利息</dd>
+                    <dd>100元起投，交易0手续费</dd>
+                </dl>
+            </div>
+            <div class="picture fl">
+                <img src="./img/2.jpg" alt="小广告的第二个图片" class="center">
+                <dl>
+                    <dt>安全严保障</dt>
+                    <dd>本息保障、风控审核贷</dd>
+                    <dd>后管理</dd>
+                </dl>
+            </div>
+            <div class="picture fl">
+                <img src="./img/3.jpg" alt="小广告的第三个图片" class="right">
+                <dl>
+                    <dt>便捷优服务</dt>
+                    <dd>24小时放宽，提前还款减免</dd>
+                    <dd>费用</dd>
+                </dl>
+            </div>
+        </div>
+        <!-- 三个小广告 end -->
+
+        <!-- 主要业务 start -->
+        <div class="business w960">
+            <div class="set">
+                <span style="font: 23px 微雅软黑;color: #4b4b4b;">主要业务</span>
+                <span style="font: 18px 微雅软黑;color: #a7a7a7;">/&nbsp; PRODUCTS SERVICES</span>
+            </div>
+            <div class="photo">
+                <ul>
+                    <li class="p1">
+                        <img src="./img/p1.jpg" alt="">
+                        <h4>投资业务</h4>
+                        <p>证券投资业务，指银行购买有价证券的活动。</p>
+                    </li>
+                    <li class="p2">
+                        <img src="./img/p2.jpg" alt="">
+                        <h4>增值</h4>
+                        <p>通过发行基金单位，集中投资者的资金，由基金管理人管理和运用资金。</p>
+                    </li>
+                    <li class="p3">
+                        <img src="./img/p3.jpg" alt="">
+                        <h4>投资业务</h4>
+                        <p>信托业务建立了以项目为中心，以风险贯穿其间的业务运作平台。</p>
+                    </li>
+                    <li>
+                        <img src="./img/p4.jpg" alt="">
+                        <h4>投资业务</h4>
+                        <p>通过代理的形式，推广和买卖产品，是产品的一种交易和流通方式。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 主要业务 end -->
+
+        <!-- 关于我们 start -->
+        <div class="about w960">
+            <h3>关于我们</h3>
+            <p>利牛金融有限公司是在1991年5月13日成立的艾宏保险公司的基础上组建而成的金融集团公司，总部设在上海，以“推动和实现可持续的价值增长”为经营理念。</p>
+        </div>
+        <!-- 关于我们 end -->
+
+        <!-- 新闻资讯和常见问题 start-->
+        <div class="question">
+
+        </div>
+        <!-- 新闻资讯和常见问题 end-->
+
+        <!-- 合作机构 start -->
+        <div class="cooperate">
+
+        </div>
+        <!-- 合作机构 end -->
+
+        <!-- 联系我们 start -->
+        <div class="contact">
+
+        </div>
+        <!-- 联系我们 end -->
+
+        <!-- 网站底部 start -->
+        <div class="footer">
+
+        </div>
+        <!-- 网站底部 end -->
+    </div>
+</body>
+
+</html>

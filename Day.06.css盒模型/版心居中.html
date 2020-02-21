@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* .div{
+            优先级低，不起作用
+            width: 300px;
+            margin: 0 auto;
+        } */
+
+        /* .test1{ */
+            /* 指定的是内容的宽高 */
+            /* width: 50px; */
+            /* border: brown 10px solid; */
+            /* 通过内边距和外边距调整位置 */
+            /* padding: 200px; */
+            /* 上下为0  左右自动就是居中，左边自动就是尽可能向左 */
+            /* margin: 0 auto; */
+        /* } */
+    </style>
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <div class="jd">
+        <div class="header" style="height: 120px;background-color:blueviolet">
+            头部
+        </div>
+        <div class="w960" style=" height: 120px;border: chartreuse solid 1px;">
+            购物
+        </div>
+        <div class="w960" style="height: 120px;border: red solid 1px;">
+            用户
+        </div>
+        <div class="w960" style="height: 120px;border: yellow solid 1px;">
+            购物车
+        </div>
+    </div>
+    <div class="test1">
+        居中盒模型
+    </div>
+
+    <!-- <div class="jd">
+        <div class="header" style="height: 120px;background-color:blueviolet">
+            头部
+        </div>
+        <div class="shop" style="width: 960px;margin: 20px auto; height: 120px;border: chartreuse solid 1px;">
+            购物
+        </div>
+        <div class="user" style="width: 960px;margin: 20px auto;height: 120px;border: red solid 1px;">
+            用户
+        </div>
+        <div class="cart" style="width: 960px;margin: 20px auto;height: 120px;border: yellow solid 1px;">
+            购物车
+        </div>
+    </div> -->
+
+</body>
+</html>

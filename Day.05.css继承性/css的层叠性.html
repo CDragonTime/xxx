@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/层叠性.css">
+    <style>
+        /* div{
+            color: red;
+        } */
+        .item{
+            color: brown;
+            /* 类的优先级其次 */
+        }
+        #box{
+            /* color: chartreuse; */
+            /* id的优先级高 */
+        }
+        div{
+            color: darkblue;
+            /* 优先级最低 */
+        }
+    </style>
+</head>
+<body>
+    <!-- style="color: blueviolet;" -->
+    <!-- <div >测试css的层叠性</div> -->
+
+    <div id="box" class="item">测试类选择器</div>
+
+</body>
+</html>
+<!-- 
+    CSS层叠性
+    引入方式的优先级：
+        行内引入  >  内部引入  =  外部引入
+        内部和外部采用的是就近原则，看是link离得近还是《style》离得近
+        类选择器优先级：   id选择器》class类选择器》标签选择器
+
+        特殊值， id的 0100 相当于面值100 ； class 0010 相当于面值十元 ；标签 0001 相当于面值为一元
+                一般用在多组层叠上面比如
+                   /* 很多的选择方式 */
+                  .box .item .demo .test{color: darkblue;}   40
+                   div div div span{color: darkgoldenrod;}    4
+                  #out #out1 #out2 #out3{color: darkred;}   400
+                  谁的值大使用谁
+
+        
+ -->

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name{
+            background-color: blueviolet;
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-right: 200px;
+            margin-bottom: 80px;
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-top: 100px;
+            padding-bottom: 23px;
+            border: black solid 10px;
+        }
+        .name1{
+            width: 200px;
+            height: 200px;
+            border: darkcyan solid 10px;
+            background-color: chartreuse;
+            /* 需要加上单位 */
+            /* margin: 100px auto */
+            /* 两个属性一样用下面的值，auto表示居中 */
+            margin: 20px auto;
+
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        盒子模型
+    </div>
+    <div class="name1">
+        盒子模型精简
+    </div>
+</body>
+</html>
+<!--
+HTML中和css中设置的区别
+    HTML 的属性主要是起一些功能性的作用的，对于一些和样式有关的属性最好留给 CSS 来做
+    CSS 的属性就是纯粹起定义样式的作用。因此，抓住这两点，就不会混淆二者的一些属性了 
+    HTML 中的 width 属性是可以不需要单位的，但是在 CSS 中的属性是必须要有单位的，在 CSS 中写 width 是同样可以达到效果，并且也满足了早期的结构与样式分离一说
+    
+    盒子模型：一个html标签是一个矩形，这个矩形就是一个盒子，也就是一个标签就是一个盒子
+    我们所说的盒子模型，主要是指可以通过六个属性来设置这个盒子
+        width：宽度
+        height：高度
+        border：边框  粗细 样式 颜色
+        padding：内边距   内边界：内容到边界的距离
+        margin：外边距  边界：盒子和盒子之间的距离
+        background：背景颜色或者背景图片
+    
+        一开始会去掉默认*{
+            margin：0；
+            padding：0；
+        }
+
+        关于padding有四种写法：
+	一个值：上， 右， 下， 左都相同
+	有两个值： 第一个值表示上，下， 第二个值表示左， 右
+	有三个值： 第一个值表示上， 第二个值表示右， 左， 第三个值表示下
+	有四个值： 第一个值表示上， 第二个值表示右， 第三个值表示下，第四个值表示左
+margin也有四种写法，如下：
+	当后面是一个值时：上，右，下，左都一样
+	当后面是二个值时：第一个值表示上，下， 第二个值表示右，左
+	当后面是三个值时：第一个值表示上，第二个值表示右，左，第三个值表示下
+	当后面是四个
+
+        如何计算一个盒子页面水平方向上占据的空间： width+左右的padding border margin
+        如何计算一个盒子页面垂直方向上占据的空间： height+上下的padding border margin
+
+
+    margin应用场景：首先去掉默认margin，利用margin实现水平居中
+        margin-left：auto；左边margin尽可能大
+        margin：0 auto；   
+            ---------头部铺满整行-----------
+                留白   版心   留白
+    border边框的设置
+     /*像素   样式：dotted点画线dashed虚线solid实线    颜色*/
+            border-top: 2px dotted green;
+    padding的认识（内边距，或者补白）
+        内容和边框的距离
+        padding的应用场景：
+            1.一行文字下面有一个边框    
+
+ -->

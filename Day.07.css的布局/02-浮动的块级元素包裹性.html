@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 没有设置宽度，宽度就是父元素的100% */
+            width: 200px;
+            height: 200px;
+            border: 3px solid red;
+        }
+        .son{
+            /* 没有设置宽度，宽度就是父元素的100% */
+            /* width: 60px;
+            height: 60px; */
+
+            float: left;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="son">son</div>
+    </div>
+</body>
+</html>
+<!-- 
+    浮动的块级元素具有包裹性：宽度尽可能小，最终仅仅包裹了内容
+        前提是：
+            块级元素
+            没有指定宽高
+            浮动了
+ -->

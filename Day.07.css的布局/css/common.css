@@ -1,0 +1,26 @@
+.w960{
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+body{
+    /*   /1.5设置行高  */
+    font: normal normal 16px/1.5 "宋体";
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.mt32{
+    margin-top: 32px;
+}
+
+.fs30{
+    font-size: 30px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 960px;
+            height: 200px;
+            border: 1px solid rebeccapurple;
+            margin: 50px auto;
+        }
+        .son1,.son2{
+            /* 因为加上了边框 ，所以内容应该放小，在不改变版型宽度的条件下 */
+            width: 206px;
+            height: 196px;
+            float: left;
+        
+        }
+        .son3,.son4{
+             /* 因为加上了边框 ，所以内容应该放小，在不改变版型宽度的条件下 */
+             width: 206px;
+            height: 196px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="son1" style="border: 2px solid red;">
+            son1
+        </div>
+        <div class="son2" style="border: 2px solid green;">
+            son2
+        </div>
+        <div class="son3" style="border: 2px solid yellow;">
+            son3
+        </div>
+        <div class="son4" style="border: 2px solid darkgoldenrod;">
+            son4
+        </div>
+    </div>
+</body>
+</html>
+<!-- 
+    标签的分类
+        块级标签：  独占一行
+        行级标签：  并排显示
+        行内块标签：并排显示
+
+    让块级标签并排显示，就可以使用浮动，使用浮动让块级标签并排显示
+
+             标准文档流：默认情况下男标签独占一行，女标签并排显示，满一行自动换行
+        这种模式就是标准文档流
+             有了浮动，浮动的元素就脱离了标准文档流，也就是有些标准文档流的规则不再适用
+        并没有完全脱离，而是半脱离
+
+
+ -->

@@ -1,0 +1,5 @@
+.w960{
+    width: 960px;
+    /* 没加单位不生效   10px */
+    margin: 10px auto;
+}

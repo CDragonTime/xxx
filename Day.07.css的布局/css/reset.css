@@ -1,0 +1,20 @@
+/* 重置样式    一般有人都总结好的 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    /* 去掉li的默认小圆点 */
+    list-style: none;
+}
+
+a{
+    /* 去除a标签默认下划线 */
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    /* 去除加粗 */
+    font-weight: normal;
+}
