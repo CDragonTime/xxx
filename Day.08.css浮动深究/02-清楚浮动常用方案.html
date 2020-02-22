@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 600px;
+            /* height: 600px; */
+            border: 3px solid red;
+        }
+        .father::after{
+            /* 没打双引号不能当做内容来使用 */
+            content: "hello";
+            clear: both;/*清除兄弟的浮动*/
+            overflow: hidden;/*清除对父元素的影响*/
+            display: block;
+        }
+        .son{
+            width: 150px;
+            /* son浮动 ，脱离了标准文档流，造成父元素高度的塌陷 */
+            float: left;
+        }
+        .son1{
+            height: 200px;
+            background-color: green;
+        }
+        .son2{
+            height: 100px;
+            background-color: pink;
+        }
+        .son3{
+            height: 400px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son son1">老大</div>
+        <div class="son son2">老二</div>
+        <div class="son son3">老三</div>
+        
+    </div>
+</body>
+</html>
+<!-- 
+    所谓的清除浮动  就是清楚浮动所造成的影响
+    主要影响分为两个方面：对父元素的影响和对后面元素的影响
+
+    清除对父元素的影响：
+    1.加高法
+    2.overflow：hidden
+    3.让父元素也浮动
+    清除对后面元素的影响
+    clear：both
+
+    上面的清除也会用，但是我们通常会用伪元素来清除
+     
+    伪类，不存在这样一个真实的类 class=“” ：hover
+    伪元素，不存在这样一个真是的元素
+    当父元素高度塌陷,通过父元素的类加上：after{
+            content: "hello";
+            clear: both;/*清除兄弟的浮动*/
+            overflow: hidden;/*清除对父元素的影响*/
+            display: block;
+    }
+        清除，一般都会去封装一个清除浮动的类
+        .clear:after{
+            content: "";
+            overflow: hidden;
+            clear: both;
+            display: block;
+        }
+ -->

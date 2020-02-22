@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 600px;
+            /* 如果father没有设置高度 高度就为内容的高度
+            前提是没有浮动 */
+            overflow: hidden;
+            /* height: 600px; */
+            border: 3px solid red;
+            /* float: left; */
+        }
+        .son{
+            width: 150px;
+            /* son浮动 ，脱离了标准文档流，造成父元素高度的塌陷 */
+            float: left;
+        }
+        .son1{
+            height: 200px;
+            background-color: green;
+            float: left;
+        }
+        .son2{
+            height: 100px;
+            background-color: pink;
+            /* float: left; */
+        }
+        .son3{
+            height: 400px;
+            background-color: yellow;
+            /* float: left; */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <!-- 给一个标签值定多个类名 -->
+        <div class="son son1">老大</div>
+        <div class="son son2">老二</div>
+        <div class="son son3">老三</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+
+    浮动元素的贴靠性
+    如果父元素的宽度一直减小，那么浮动的元素有贴靠性，也就是父元素
+        装不下三个子元素，老三先去贴靠老大，本来是贴着老二
+        如果贴不上去，就去帖父元素的边框
+
+        1.浮动的两方面影响
+            第一个是对父元素的影响，高度的塌陷
+
+        如果子元素全部浮动
+        并且父元素也浮动，就不会有高度塌陷
+                                1.给父元素加上高度
+                                2.给父元素加上overflow：hidden
+                                3.让父元素也浮动
+        2.对后面元素影响
+            也就是说不想让后面元素钻上来，也就是清楚浮动所造成的影响
+            clear：left   清楚左浮动的影响
+            clear：right   清除右浮动的影响
+            clear：both   清除左右浮动的影响
+            清除浮动，在受影响的元素身上清除影响
+        
+    如果浮动元素的高度超过父元素的高度，他会影响父元素后面的元素
+    如果后面的元素是普通文本，这个文本会围绕着这个浮动的元素，
+    也就是产生所谓的自围效果
+ -->

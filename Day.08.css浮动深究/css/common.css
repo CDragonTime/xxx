@@ -1,0 +1,6 @@
+.clear::after{
+    content: "";
+    overflow: hidden;
+    clear: both;
+    display: block;
+}
