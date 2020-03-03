@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .yellow{
+            font-size: 40px;
+            background-color: yellow;
+        }
+        .father{
+            width: 300px;
+            height: 100px;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- div是块级元素，没有指定宽度，它的宽度是父元素（body）的100% -->
+    <!-- width的值没有设置，值就为auto -->
+    <div class="red">
+        red
+    </div>
+    <div class="yellow">
+        yellow
+    </div>
+    <span class="green">
+        green
+    </span>
+
+    <div class="father">
+        <div class="son1" style="width: 25%;height: 100px;float: left; background-color:indigo">son1</div>
+        <div class="son2" style="width: 10%;height: 100px;float: left; background-color:green">son2</div>
+        <div class="son3" style="width: 10%;height: 100px;float: right; background-color:grey">son3</div>
+        <div class="son4" style="width: 25%;height: 100px;float: right; background-color:yellow">son4</div>
+    </div>
+</body>
+</html>
+<!-- 
+    一个盒子是有内容区域，也就是width和height
+        对于快标签，可以设置width和height
+        对于行标签，设置width和height也不起作用（相当于没有设置）
+
+    width没有设置，值为auto，不同类的标签auto的含义不同
+    如果是块级标签，auto具有贪婪性
+    如果是杭集标签，auto具有懒惰型，也就是包裹内容
+
+    height没有设置，高度就根据font-size来自动设置
+    width和height除了可以设置px，还可以设置百分比
+ -->

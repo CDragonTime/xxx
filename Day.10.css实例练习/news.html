@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-size: 14px;
+
+        }
+
+        .news {
+            width: 300px;
+            border: 1px solid gray;
+            margin: 50px auto;
+        }
+
+        /* 一般都写成 .news ul */
+        ul {
+            list-style: none;
+            padding: 10px;
+        }
+
+        li {
+            padding-left: 10px;
+            background: url();
+        }
+
+        a {
+            color: #252525;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: brown;
+        }
+
+        .movies {
+            /* border: 1px solid red; */
+            width: 300px;
+            margin: 20px auto;
+        }
+        .movies ol{
+            list-style: none;
+        }
+        .movies li{
+            /* height: 30px; */
+            border-bottom: 1px solid #9acd32;
+            margin-bottom: 2px;
+            line-height: 30px;
+        }
+        .movies ol li strong{
+            display: inline-block;
+            width: 20px;
+            height: 18px;
+            background-color: skyblue;
+            color: white;
+            text-align: center;
+            line-height: 18px;
+        }
+        .movies ol li em{
+            font-size: 14px;
+            border: 1px solid #4d4d4d;
+            display: inline-block;
+            width: 18px;
+            height: 14px;
+            /* background-color: skyblue; */
+            color: gray;
+            text-align: center;
+            line-height: 18px;
+            font-style: normal;
+        }
+        .movies ol li a{
+            text-decoration: none;
+            margin-left: 8px;
+            margin-right: 20px;
+            font-weight: bolder;
+        }
+        .movies ol li a:hover{
+            text-decoration: underline;
+            color: hotpink;
+        }
+        .movies ol li span{
+            /* 高版本chrome谷歌浏览器已经不再支持-webkit-text-size-adjust样式
+            也就是不在支持小于12px以下字体，所以要使用时候慎用。
+            为了兼容各大浏览器最好最小文字字体大小设置12px及12px以上。 */
+            /* 所以设置的10px还是显示的12px */
+            font-size: 10px;color: #cccccc;
+        }
+        .movies ol li .span2{
+            background: url(./img/timg.jpg) no-repeat right center;
+            background-size: 18px 18px;
+            padding-right: 25px;
+            margin-right: 2px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news">
+        <!-- strong表示加粗 -->
+        <ul>
+            <li><img src="./img/timg.jpg" width="10px" height="10px" alt=""><a
+                    href=""><strong>习近平：扎U盾符合非共和国反弹</strong></a></li>
+            <li><img src="./img/timg.jpg" width="10px" height="10px" alt=""><a href="">习近平：扎U盾符合非共和国反弹</a></li>
+            <li><img src="./img/timg.jpg" width="10px" height="10px" alt=""><a href="">习近平：扎U盾符合非共和国反弹</a></li>
+            <li><img src="./img/timg.jpg" width="10px" height="10px" alt=""><a href="">习近平：扎U盾符合非共和国反弹</a></li>
+            <li><img src="./img/timg.jpg" width="10px" height="10px" alt=""><a href="">习近平：扎U盾符合非共和国反弹</a></li>
+            <li><img src="./img/timg.jpg" width="10px" height="10px" alt=""><a href="">习近平：扎U盾符合非共和国反弹</a></li>
+            <li><img src="./img/timg.jpg" width="10px" height="10px" alt=""><a href="">习近平：扎U盾符合非共和国反弹</a></li>
+        </ul>
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="movies">
+        <!-- <div class="movie"> -->
+        <ol>
+            <li><strong>1</strong><a href="">狼少年  </a><span class="span1">720p</span><span class="span2">34647</span></li>
+            <li><strong>2</strong><a href="">暴力街区</a><span class="span1">720p</span><span class="span2">31565</span></li>
+            <li><strong>3</strong><a href="">澳门风云</a><span class="span1">720p</span><span class="span2">25466</span></li>
+            <li><em>4</em><a href="">新人肉叉烧包    </a><span class="span1">720p</span><span class="span2">22354</span></li>
+            <li><em>5</em><a href="">京城81号        </a><span class="span1">720p</span><span class="span2">16548</span></li>
+        </ol>
+        <!-- </div> -->
+    </div>
+</body>
+
+</html>

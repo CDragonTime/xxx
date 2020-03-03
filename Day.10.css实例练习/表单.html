@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;margin: 0;
+        }
+        body{
+            font-size: 14px;
+            color: #333333;
+        }
+        ul{
+            list-style: none;
+        }
+        form{
+            width: 380px;
+            height: 400px;
+            margin: 100px auto;
+            border: 1px solid #4d4d4d;
+            padding: 15px;
+        }
+        form li{
+            padding: 10px;
+        }
+        form .item{
+            width: 240px;
+            height: 26px;
+            padding-left: 2px;
+            border: 1px solid #cccccc;
+        }
+        form .label{
+            /* 女标签变成行内块 */
+            display: inline-block;
+            width: 70px;
+        }
+        form .radio{
+            display: inline-block;
+            margin-left: 8px;
+            margin-right: 5px;
+        }
+        .btn{
+            width: 170px;
+            height: 40px;
+            background-color: skyblue;
+            color: white;
+            line-height: 40px;
+            font-weight: bold;
+            /* 可能默认就设置了这个属性 */
+            /* text-align: center; */
+            font-size: 16px;
+            border: 1px solid rgb(31, 215, 228);
+        }
+        .set{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <ul>
+            <li>
+                <!-- label标签通过 for属性和text的id标签名相同 点击就可以获取焦点 -->
+                <label class="label" for="email">电子邮箱：</label>
+                <input type="text" name="" id="email" class="item">
+            </li>
+            <li>
+                <label class="label" for="username">用户名：</label>
+                <input type="text" name="" id="username" class="item">
+            </li>
+            <li>
+                <label class="label" for="password">密码：</label>
+                <input type="password" name="" id="password" class="item">
+            </li>
+            <li>
+                <label class="label" for="sex">请选择：</label>
+                <!-- checked默认选中的 -->
+                <input class="radio" type="radio" name="sex" value="男" id="" checked>男
+                <input class="radio" type="radio" name="sex" value="女" id="">女
+            </li>
+            <li>
+                <label  class="label" for="birthday">生日：</label>
+                <select name="birth" id="birthday">
+                    <!-- select默认选中 -->
+                    <option value="" selected>-请选择-  </option>
+                    <option value="">2019</option>
+                    <option value="">2018</option>
+                    <option value="">2017</option>
+                    <option value="">2016</option>
+                    <option value="">2015</option>
+                    <option value="" >2014</option>
+                    <option value="">2013</option>
+                    <option value="">2012</option>
+                    <option value="" >2011</option>
+                    <option value="">2010</option>
+                </select>
+                年
+                <select name="month" id="month">
+                    <!-- select默认选中 -->
+                    <option value="" selected>-请选择-  </option>
+                    <option value="">2019</option>
+                    <option value="">2018</option>
+                    <option value="">2017</option>
+                    <option value="">2016</option>
+                    <option value="">2015</option>
+                    <option value="" >2014</option>
+                    <option value="">2013</option>
+                    <option value="">2012</option>
+                    <option value="" >2011</option>
+                    <option value="">2010</option>
+                </select>
+                月
+                <select name="day" id="day">
+                    <!-- select默认选中 -->
+                    <option value="" selected>-请选择-  </option>
+                    <option value="">2019</option>
+                    <option value="">2018</option>
+                    <option value="">2017</option>
+                    <option value="">2016</option>
+                    <option value="">2015</option>
+                    <option value="" >2014</option>
+                    <option value="">2013</option>
+                    <option value="">2012</option>
+                    <option value="" >2011</option>
+                    <option value="">2010</option>
+                </select>
+                日
+                <li>
+                    <label  class="label" for="status">我现在：</label>
+                    <!-- checked默认选中的 -->
+                    <input type="radio" class="radio" name="status" value="1" id="" checked>在工作
+                    <input type="radio" class="radio" name="status" value="2" id="">在学校
+                    <input type="radio" class="radio" name="status" value="3" id="">在家
+                </li>
+                <li class="agree">
+                    <label  class="label" for=""></label>
+                    <input type="checkbox" name="agree" id="">
+                    <span>同意</span>
+                    <a href="">XXXXX服务条款</a>
+                </li>
+                <li class="set">
+                    <input type="submit" value="立即注册" class="btn">
+                </li>
+
+            </li>
+            
+
+        </ul>
+
+    </form>
+</body>
+</html>

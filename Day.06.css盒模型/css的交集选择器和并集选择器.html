@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 这时候用这两种都不能选中p标签的abb
+            因此需要交集选择器
+            注意不能写成.abbp这样无法起作用分且有歧义
+         */
+            p.abb{
+                width: 100px;
+                background-color: green;
+            }
+        /* p{
+                width: 100px;
+            background-color: green;
+        } */
+        /* .abb{
+                width: 100px;
+            background-color: green;
+        } */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="box1">似懂非懂三国杀</p>
+    </div>
+    <p class="abc">abc</p>
+    <a href="" class="abb">a标签的abb</a>
+    <p class="abb">abb</p>
+    <p class="abcc">abcc</p>
+    <p >没有</p>
+</body>
+</html>

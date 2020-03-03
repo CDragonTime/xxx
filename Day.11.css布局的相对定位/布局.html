@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .son1{width: 30px;height: 30px;background-color: green;}
+        .son2{
+            width: 30px;
+            height: 30px;
+            background-color: palegreen;
+            /* 相对于原来的位置离top10px  离左边也是10px */
+            /* 盖住了下面的son3   完全脱离标准文档流的 */
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        .son3{width: 30px;height: 30px;background-color: yellow;}
+
+        .nav{
+            width: 300px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .nav ol{
+            list-style: none;
+        }
+        .nav ol li{
+            padding-right: 20px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son1">son1</div>
+        <div class="son2">son2</div>
+        <div class="son3">son3</div>
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="nav">
+        <ol>
+            <li><a href="">首页</a></li>
+            <li><a href="">电影</a><img src="./img/1.jpg" alt="胜多负少" style=" width: 10px;height: 10px;  position: relative;bottom: 7px;right: 3px;"></li>
+            <li><a href="">更多</a></li>
+        </ol>
+    </div>
+    <form action="">
+        <input type="checkbox" name="" id="" style="position: relative;top: 2px;right: 4px;">同意XX条款
+    </form>
+</body>
+</html>
+<!-- 
+    css 中常用的布局方式
+        1.流式布局  遵循标准文档进行的布局 
+            男标签独占一行      女标签并排显示，满一行自动换行
+
+        2.浮动布局
+            让男标签在一行并排显示。
+            浮动有很多的特点：
+                破坏性
+                字围效果
+                包裹性 如果一个浮动元素没有设置宽高，宽高就是内容的宽高
+                可以让行级标签变成会计标签 可以设置宽高
+                贴靠行 
+                造成影响 对父元素的影响和对兄弟元素的影响
+                        加高法   overflow：hidden  伪元素
+                半脱离标准文档流
+
+        3.层布局
+            实现层布局，通过定位实现。层布局的元素是完全脱离标准文档流的
+            定位也是css当中的一个属性，position
+            static   默认值   不定位
+            relative   相对定位    相对于它本身应该出现的位置
+            absolute   决对定位    根据所谓的参考点进行定位
+            fixed   固定定位   浏览器窗口
+
+            相对定位    position-relative
+            只是用position：relative还是不行，需要配合top left right bottom其中的一个或两个设置偏移量
+                应用场景：
+                    局部的位置调整
+                        比如说复选框按钮的位置；导航栏右上角的hot或者new小照片
+                    作为绝对定位的参考点
+            
+        4.flex布局
+            不需要浮动
+
+ -->

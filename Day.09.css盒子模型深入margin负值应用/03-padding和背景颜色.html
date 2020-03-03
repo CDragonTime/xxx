@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            background-color: blue;
+        }
+        .item{
+            background-color: green;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    1
+    <div class="box">box</div>
+    2
+    <hr>
+    <!-- 自定义标签默认都是行内的 -->
+    <aaaa>自定义标签</aaaa>
+    11111
+    <span class="item">span</span>
+    22222
+    <hr>
+    11111
+    <!-- 行标签的padding在垂直方向上不占据实际上用来计算的空间（水平方向上会占有），但是有背景颜色还是会显示， -->
+    <h1>圣诞节疯狂是否会回家</h1>
+    <span class="item">span123</span>
+    <h1>四大金刚看电视看电视</h1>
+</body>
+</html>
+<!-- 
+
+        默认情况下，背景（背景颜色或图片）会填充padding
+
+        对于块级元素，padding在垂直方向上也是占据空间的
+
+        对于行级元素，padding在垂直方向不影响实际高度，水平方向上还是占据空间
+        
+ -->

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            /* 仅仅作为一个参考点 */
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            top: 100px;
+            left: 400px;
+        }
+        .son1{width: 30px;height: 30px;background-color: green;}
+        .son2{
+            /* 老二完全脱离了标准文档流，因此老三钻上去 */
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            /* 与position：relative同理 */
+            top: 3px;
+            left: 40px;
+            /* 整数相比较的，因此son3本来应该在son2上面，因为设置的z-index较大（取整），所以son2浮在最上面 */
+            z-index: 2;
+        }
+        .son3{
+            position: absolute;
+            width: 30px;height: 30px;background-color: yellow;
+            top: 4px;
+            left: 30px;
+            z-index: 1;
+            }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son1">son1</div>
+        <span class="son2">son2</span>
+        <div class="son3">son3</div>
+    </div>
+</body>
+</html>
+<!-- 
+
+    绝对定位是根据参考点进行定位
+        参考点可以设置到父元素上面，或者设置到父父元素上面
+        没有的话就设置到body上面
+        
+        让son2进行绝对定位，需要给son2设置position：absolute，还需要设置参考点。
+        通过属性position：relative来设置，此时这个属性就不再表示相对定位了
+        也就是说不只是上面position：relative，position：absolute/fixed都可以作为参考点
+        往往会以position：relative作为参考点，也就是所说的父相自绝
+
+        绝对定位也是通过 top bottom left right来设置
+        如果没有设置参考点，就以body作为参考点
+        如果一个行内元素定位了，那么他也会变为块级元素  span元素定位了也能设置宽高了
+
+        绝对定位的应用场景：
+            小元素（或者小图片）用大图片做的绝对定位
+
+        z-index
+            如果多个元素都绝对定位，有可能重叠到一起，可以通过z-index改变前后顺序
+            z-index值越大越靠前
+ -->

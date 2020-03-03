@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .father {
+            margin: 20px auto;
+            text-align: center;
+            width: 960px;
+            border: 2px solid red;
+            /* overflow: hidden; */
+        }
+
+        /* 伪元素去除浮动 */
+        .father:after {
+            content: "";
+            overflow: hidden;
+            clear: both;
+            display: block;
+        }
+
+        .son {
+            /* margin-left: -1px; */
+            height: 200px;
+            float: left;
+            width: 225px;
+            /* border: 1px solid green; */
+            margin-right: 20px;
+            /* border-right: 1px solid blue; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son" style="background-color: blue;">son1</div>
+        <div class="son" style="background-color: purple;">son2</div>
+        <div class="son" style="background-color: green;">son3</div>
+        <div class="son" style="background-color: yellow;margin-right: 0px;">son4</div>
+        <!-- <div class="son" style="border-right: 0;">son4</div> -->
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="father">
+        <!-- 设置这个div就相当于内部写个div加宽了，正好能把四个都容下，而且最后一个还不用去掉右边距 -->
+        <div class="set" style="margin-right: -20px;">
+            <div class="son" style="background-color: blue;">son1</div>
+            <div class="son" style="background-color: purple;">son2</div>
+            <div class="son" style="background-color: green;">son3</div>
+            <div class="son" style="background-color: yellow;">son4</div>
+        </div>
+    </div>
+</body>
+
+</html>

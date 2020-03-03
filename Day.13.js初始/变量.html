@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <button value="1" onclick="var a = 1"> 1</button>
+    <button value="2" onclick="var a = 2"> 2</button>
+    <button value="3" onclick="var a = 3"> 3</button>
+    <button value="4" onclick="var a = 4"> 4</button>
+    <button value="5" onclick="var a = 5"> 5</button>
+    <button value="6" onclick="var a = 6"> 6</button>
+    <button value="7" onclick="var a = 7"> 7</button>
+    <button value="8" onclick="var a = 8"> 8</button>
+    <button value="9" onclick="var a = 9"> 9</button>
+    <button value="0" onclick="var a = 0"> 0</button>
+    
+
+    <script>
+        // var a = 1;//1 表示一个内存空间的值，a表示内存空间的别名
+        // console.log(a);
+
+        function testAdd(a,b){
+            // console.log(a+b);
+            return a+b;
+        }
+        function testMun(a,b){
+            // console.log(a+b);
+            return a-b;
+        }
+        function testCheng(a,b){
+            // console.log(a+b);
+            return a*b;
+        }
+        function testChu(a,b){
+            // console.log(a+b);
+            return a/b;
+        }
+
+        function test(){
+            var a = "字符串";
+            console.log(typeof a);
+            var a = false;
+            console.log(typeof a);
+            var a = 35.5;
+            console.log(typeof a);
+            var b;
+            console.log(typeof b);
+            console.log(typeof a*b);
+            console.log(Number.MIN_VALUE);
+            console.log(Number.MAX_VALUE);
+
+            // 转义字符
+            // 双引号嵌套的问题
+            var a = '\'hello\''
+            console.log(a);
+
+            // 外双内单
+            var a1 = "'gdfgdg'";
+            var a2 = '"gdfgd反倒是g"';
+            console.log(a1);
+            console.log(a2);
+
+            var a3 = "hello\n world";
+            console.log(a3);
+
+            console.log(Number("0x4"));
+        }
+        test();
+
+        // 五种情况
+        console.log(Boolean(""));
+        console.log(Boolean(0));
+        console.log(Boolean(-0));
+        console.log(Boolean(undefined));
+        console.log(Boolean(null));
+        console.log(Boolean(NaN));
+        console.log(Boolean(0.0));
+        console.log(Boolean(0.1));
+    </script>
+</body>
+</html>

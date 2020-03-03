@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 因为写了内容，再设置width为零就会导致文字内容有高度，没宽度，因而设置padding的时候不是对应的文字 */
+            /* width: 0; */
+            width: 100px;
+            padding: 30px;
+            background-color: tomato;
+            margin: 60px;
+            border: 4px solid red;
+        }
+        .item{
+            /* 由此可见在行元素中padding和margin在垂直方向上都没有实际的计算进入页面实际数值
+            但是在水平方向上会增加 */
+            padding: 30px;
+            background-color: tomato;
+            margin: 60px;
+            border: 4px solid red;
+        }
+    </style>
+</head>
+<body>
+    1<div class="box">div</div>2
+    <hr>
+    <hr>
+    1
+    <span class="item">span</span>
+    2
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    研究兄弟元素margin重叠
+    <div class="father">
+        <div class="son1" style="display: inline-block; width: 100px;height: 100px;background-color:saddlebrown;margin-bottom: 50px;">son1</div>
+        <div class="son2" style="display: inline-block; width: 100px;height: 100px;background-color:yellow;margin-top: 30px;">son2</div>
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    研究父子元素margin重叠
+    <div class="father" style="margin-top: 100px;">
+        <div class="son1" style="display: inline-block; margin-top: 100px;width: 100px;height: 100px;background-color:saddlebrown;margin-bottom: 50px;">son1</div>
+        <div class="son2" style="width: 100px;height: 100px;background-color:yellow;margin-top: 30px;">son2</div>
+    </div>
+</body>
+</html>
+<!-- 
+
+    对于块级标签，margin在四个方向上都有效，对于行级标签，在垂直方向上无效，在水平方向上有效
+
+    margin的重叠问题：
+        对于两个块级元素（兄弟元素），如果都设置了margin有重合的情况，会选取大的作为共同的margin
+        父元素的margin-top和子元素的margin-top等等之类的重叠
+
+        如何取消重叠：
+            1.父子元素之间的重叠    
+                加上边框
+                加上padding 
+                把块元素设为行内块   display: inline-block;
+                                重叠问题一定是发生在块级元素，并且是垂直方向上才有重叠，水平方向上没有
+            2.兄弟元素之间的重叠    
+                把元素设置为行内块，兄弟元素都要设置，
+                浮动
+                写页面时避免重叠问题，要么设置上面盒子的下margin，要么设置下面盒子的上margin
+                
+ -->

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* background-position: -100px 100px; */
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            width: 1000px;
+            height: 800px;
+            border: 2px solid red;
+            /* background: url(); */
+            background-image: url(./img/timg.jpg);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">div背景</div>
+</body>
+</html>
+<!-- 
+    盒子模型中可以通过六大属性设置
+        width height border margin padding   background
+
+        背景：
+            背景颜色和背景图片
+
+        一个盒子的样式包含三部分：我们自己写的，默认的，继承过来的
+        默认情况下也是有背景的，可以在computed中查看默认样式，注意点击show all
+        rgb表示三原色，而设置rgba（也就是默认的背景颜色rgba（0，0，0，0）前三个零表示黑色）a即代表透明度
+
+        背景图片：
+            1.也是通过background设置
+                也可以通过background-image设置（不过这个是用来专门设置图片的）
+            2.后面是url函数 在url（）的括号内写上图片的1路径，路径可以加上引号，也可以不加
+            3.背景图片默认填充内容和padding，背景颜色也是一样
+            4.背景图片默认会在x轴和y轴平铺，图片左上角和盒子左上角重合
+                如果不想平铺 通过background-repeat来设置 repeat  repeat-x  repeat-y  no-repeat不平铺
+                默认是repeat
+
+            5.可以改变背景图片位置
+                通过background-position来设置，设置方法：
+                    关键字设置  x轴 ：left   center   right
+                                y轴： top   center   bottom
+                    px来设置    10px 10px 设置负值就跑出去一部分
+                    可以设置百分号  一般不用
+
+        一个网站上有很多小图片，也就是一张大图片上面放了很多的小图片
+            大图：精灵图，也叫雪碧图  （比如一张大图片上有很多小图片的按钮）
+        
+            如果一个网站有一千张小图，如果没有合成大图 就意味着要请求一千次
+            每次请求都有时间和带宽的消耗
+            合成大图以后只需要请求服务器一次，请求回来大图以后，怎么得到大图上的小图
+            通过background-position得到小图片
+            
+        背景颜色：background-color
+        背景图片：background-image
+        和font一样，也有一个合成属性，叫background
+        background后面可以写一堆的属性
+        在项目中，往往会这样写 background：#123456；设置背景颜色
+                            background：url（"./img/XX"） no-repeat  10px  10px 设置背景图片
+                            
+                            
+
+        
+ -->
