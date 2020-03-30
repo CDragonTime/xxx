@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .test{
+            background-color: skyblue;
+            width: 300px;
+            height: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box">
+        <h1>学习js脚本</h1>
+    </div>
+    <button id="button1">点击变化</button>
+    <script>
+        var selectBox = document.querySelector("#box");
+        var button1 = document.querySelector("#button1");
+        // button1为空
+        // alert(button1)
+        button1.addEventListener("click",function(){
+            selectBox.className = "test"
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝网 - 淘！我喜欢</title>
+    <!-- keywords 一般情况下一个上线的网站都有keywords  关键词  有利于SEO -->
+    <meta name="keywords" content="淘宝网">
+    <!-- description 描述 都要加  有利于SEO  -->
+    <meta name="description"
+        content="淘宝网 - 亚洲最大、最安全的网上交易平台，提供各类服饰、美容、家居、数码、话费/点卡充值… 8亿优质特价商品，同时提供担保交易(先收货后付款)、先行赔付、假一赔三、七天无理由退换货、数码免费维修等安全交易保障服务，让你全面安心享受网上购物乐趣！">
+    <!-- 引入首页面的css文件 -->
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <!-- shortcut icon  网站的标题前面的小图标 -->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <!-- 引入JQ文件 学习时JS文件放到页面最下面 但是多数人还是喜欢放到最前面 -->
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <!-- 引入首页面的JS文件 写JQ代码 实现首页面交互 -->
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <!-- 顶部导航栏 start -->
+    <div class="nav-warper icon">
+        <div class="w1190">
+            <ul class="nav-left">
+                <li class="menu">
+                    <div class="inner">
+                        <a href="" style="color: black;">中国大陆</a>
+                        <span class="icon">&#xe62b;</span>
+                    </div>
+                    <div class="outmenu country">
+                        <div class="h">
+                            <a href="">全球</a>
+                            <a href="">中国大陆</a>
+                            <a href="">中国香港</a>
+                            <a href="">中国台湾</a>
+                            <a href="">中国澳门</a>
+                            <a href="">韩国</a>
+                            <a href="">····</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu personal">
+                    <div class="inner">
+                        <a href="">username</a>
+                        <span class="icon">&#xe62b;</span>
+                    </div>
+                    <div class="outmenu">
+                        <a href="">账号管理</a>
+                        <a href="">退出</a>
+                    </div>
+                </li>
+                <li class="menu">
+                    <div class="inner">
+                        <i>&#xe609;</i>
+                        <a href="" style="color: black;">消息</a>
+                        <span class="icon">&#xe62b;</span>
+                    </div>
+                    <div class="outmenu">
+                        <a href="">查看全部</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">手机逛淘宝</a>
+                </li>
+            </ul>
+            <ul class="nav-right">
+                <li class="menu">
+                    <div class="inner">
+                        <a href="">我的淘宝</a>
+                        <span class="icon">&#xe62b;</span>
+                    </div>
+                    <div class="outmenu">
+                        <a href="">已买到的宝贝</a>
+                        <a href="">我的足迹</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <i class="tbcheng">&#xe607;</i>
+                        <a href="">购物车</a>
+                        <span class="icon">&#xe62b;</span>
+                    </div>
+                </li>
+                <li class="menu">
+                    <div class="inner">
+                        <i>&#xe616;</i>
+                        <a href="">收藏夹</a>
+                        <span class="icon">&#xe62b;</span>
+                    </div>
+                    <div class="outmenu">
+                        <a href="">收藏的宝贝</a>
+                        <a href="">收藏的店铺</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="" class="setB">商品分类</a>
+                </li>
+                <li class="menu">
+                    <div class="inner">
+                        <a href="">千牛卖家中心</a>
+                        <span class="icon">&#xe62b;</span>
+                    </div>
+                    <div class="outmenu">
+                        <a href="">免费开店</a>
+                        <a href="">只想免费开店</a>
+                        <a href="">只想免费开店</a>
+                        <a href="">只想免费开店</a>
+                        <a href="">只想免费开店</a>
+                        <a href="">只想免费开店</a>
+                        <a href="">只想免费开店</a>
+                    </div>
+                </li>
+                <li class="menu">
+                    <div class="inner">
+                        <a href="">联系客服</a>
+                        <span class="icon">&#xe62b;</span>
+                    </div>
+                    <div class="outmenu">
+                        <a href="">消费者客服</a>
+                        <a href="">卖家客服</a>
+                    </div>
+                </li>
+                <li class="menu">
+                    <div class="inner">
+                        <i class="tbcheng">&#xe64d;</i>
+                        <a href="">网站导航</a>
+                        <span class="icon">&#xe62b;</span>
+                    </div>
+                    <div class="outmenu">
+                        <a href="">查看全部</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航栏 end -->
+
+    <!-- 顶部搜索区域 start -->
+    <!-- fixed类表示scrollTop过大，导航栏需要吸顶 一开始加上fixed出现遮盖bug -->
+    <div class="search-wrapper">
+        <!-- 版心 -->
+        <div class="search-center">
+            <!-- 左侧的logo -->
+            <div class="logo">
+                <h1>淘宝网</h1>
+            </div>
+            <!-- 导航栏的logo -->
+            <div class="logo2">
+                <h2>淘宝网</h2>
+            </div>
+            <div class="erweima">
+                <a href="">手机淘宝</a>
+                <img src="./images/qr.png" alt="二维码">
+                <span class="xx">x</span>
+            </div>
+            <!-- 搜索框整体   tianmao控制点击后的样式,加上tianmao就是天猫的样式 -->
+            <div class="searchall">
+                <div class="searchtop">
+                    <ul>
+                        <li class="baobei tbcheng on">宝贝</li>
+                        <li class="tmall tbcheng">天猫</li>
+                        <li class="dianpu tbcheng">店铺</li>
+                    </ul>
+                </div>
+                <div class="searchtext">
+                    <form action="">
+                        <input type="text" class="text1">
+                        <input type="submit" value="搜索" class="find">
+                        <span>智熏法式桔梗裙</span>
+                        <em class="iconfont em1">&#xe66c;</em>
+                        <em class="icon em2">&#xe602;</em>
+                    </form>
+                </div>
+                <div class="searchsome">
+                    <a href="">新款连衣裙</a>
+                    <a href="">四件套</a>
+                    <a href="" class="tbcheng">潮流体恤</a>
+                    <a href="">时尚女鞋</a>
+                    <a href="">时尚女鞋</a>
+                    <a href="">时尚女鞋</a>
+                    <a href="">时尚女鞋</a>
+                    <a href="" class="tbcheng">时尚</a>
+                    <a href="">时尚女鞋</a>
+                    <a href="" class="tbcheng">时尚鞋</a>
+                    <a href="">时尚女鞋</a>
+                    <a href="">时尚女鞋</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体市场导航栏----==== -->
+    <div class="totalnav ">
+        <div class="w1190">
+            <h2>主题市场</h2>
+            <ul class="ul1">
+                <li>天猫</li>
+                <li>聚划算</li>
+                <li>天猫超市</li>
+            </ul>
+            <ul class="ul2">
+                <li>淘抢购</li>
+                <li>电器城</li>
+                <li>司法拍卖</li>
+                <li>淘宝心选</li>
+                <li>兴农脱贫</li>
+            </ul>
+            <ul class="ul3">
+                <li>飞猪旅行</li>
+                <li>飞猪旅行</li>
+                <li>飞猪旅行</li>
+            </ul>
+        </div>
+    </div>
+    <div class="all">
+    <div class="content">
+        <div class="w1190">
+            <div class="menuleft">
+            <ul>
+                <li>
+                    <em class="icon">&#xe635;</em>
+                    <span><a href="#">女装</a> / <a href="#">男装</a> / <a href="#">内衣</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="./images/test/submenu1.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe625;</em>
+                    <span><a href="#">鞋靴</a> / <a href="#">箱包</a> / <a href="#">配件</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu2.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe619;</em>
+                    <span><a href="#">童装玩具</a> / <a href="#">孕产</a> / <a href="#">用品</a><span class="f-right"></span>
+                        <i class="iconfont">&#xe61a;</i>
+                        <div class="market-submenu"><img src="images/test/submenu3.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe6a0;</em>
+                    <span><a href="#">家电</a> / <a href="#">数码</a> / <a href="#">手机</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu4.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe604;</em>
+                    <span><a href="#">美妆</a> / <a href="#">洗护</a> / <a href="#">保健品</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu5.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe61a;</em>
+                    <span><a href="#">珠宝</a> / <a href="#">眼镜</a> / <a href="#">手表</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu6.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe627;</em>
+                    <span><a href="#">运动</a> / <a href="#">户外</a> / <a href="#">乐器</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu7.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe66a;</em>
+                    <span><a href="#">游戏</a> / <a href="#">动漫</a> / <a href="#">影视</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu8.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xf02ab;</em>
+                    <span><a href="#">美食</a> / <a href="#">生鲜</a> / <a href="#">零食</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu9.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe637;</em>
+                    <span><a href="#">鲜花</a> / <a href="#">宠物</a> / <a href="#">农资</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu10.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe62f;</em>
+                    <span><a href="#">房产</a> / <a href="#">装修</a> / <a href="#">建材</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu11.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe68b;</em>
+                    <span><a href="#">家具</a> / <a href="#">家饰</a> / <a href="#">家纺</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu12.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe66b;</em>
+                    <span><a href="#">汽车</a> / <a href="#">二手车</a> / <a href="#">用品</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu13.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe63c;</em>
+                    <span><a href="#">办公</a> / <a href="#">DIY</a> / <a href="#">五金电子</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu14.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe650;</em>
+                    <span><a href="#">百货</a> / <a href="#">收纳</a> / <a href="#">家庭保健</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu15.jpg"></div>
+                </li>
+                <li>
+                    <em class="icon">&#xe609;</em>
+                    <span><a href="#">学习</a> / <a href="#">卡券</a> / <a href="#">本地服务</a></span>
+                    <i class="iconfont">&#xe61a;</i>
+                    <div class="market-submenu"><img src="images/test/submenu16.jpg"></div>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</div>
+    <!-- 顶部搜索区域 end-->
+</body>
+
+</html>

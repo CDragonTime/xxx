@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加新学生</title>
+</head>
+<body>
+    <h1 style="display: inline-block;">添加新学生 &nbsp;&nbsp;&nbsp;&nbsp;</h1><a href="/allStudent">返回查看所有学生</a>
+    <div>
+        <ul>
+            <li>
+                <label for="">姓名：</label>
+                <input type="text" name="uname" id="uname">
+            </li>
+            <li>
+                <label for="">年龄：</label>
+                <input type="text" name="age" id="age">
+            </li>
+            <li>
+                性别：
+                <input type="radio" name="sex" value="男">男
+                <input type="radio" name="sex" value="女">女
+            </li>
+            <li>
+                <label for="">籍贯：</label>
+                <input type="text" name="provice" id="provice">
+            </li>
+            <li>
+                <input type="button" value="添加" id="btn">
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="/jquery1.11.3.js"></script>
+<script>
+    $("#btn").click(function(){
+        $.post("/addStudent",{
+            "name":$("#uname").val(),
+            "age":$("#age").val(),
+            "sex":$("input[name=sex]:checked").val(),
+            "provice":$("#provice").val(),
+        },function(data){
+            console.log(data)
+            if(data == "1"){
+                alert("添加学生成功了~")
+            }else{
+                alert("添加学生失败了")
+            }
+        })
+    })
+</script>
+</html>

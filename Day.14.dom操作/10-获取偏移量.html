@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 封装一方法 叫offsetBody(ele)  返回它距离body的偏移量。
+    什么时候使用for循环，什么时候使用while循环：
+        知道循环次数，使用for循环。
+        不知道循环次数时，使用while循环。 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 60px;
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+        }
+        .father{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 2px solid gold;
+        }
+        .son{
+            position: absolute;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box
+        <div class="father">father
+            <div class="son">son</div>
+        </div>
+    </div>
+    <script>
+        // 获取层层定位中小盒子对于body的相对定位
+        
+    </script>
+</body>
+</html>

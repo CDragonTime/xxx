@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    什么是DOM：
+        D：document html文档  document是对象  它面有很多方法
+        O：object 元素对象 对象上面也有很多的方法
+        M：树模型  元素节点  属性节点  文本节点
+
+    版本：DOM0， DOM1， DOM2， DOM3
+
+    获取元素对象？
+        常用：
+            document.getElementById();  
+            document/el.getElementsByTagName(); 
+            parentNode  获取父节点
+            el.querySelector("选择器");  不兼容IE6,7,8  比较强大
+            el.querySelectorAll("选择器");  不兼容IE6,7,8  比较强大
+            document 获取整个document文件对象   document表示整个文档
+            document.documentElement   获取整个document文件对象  表示取得对<html>的引用
+        不常用：
+            document/el.getElementByClassName();   不兼容IE6,7,8
+            document/el.getElementByName();   在IE浏览器中只对form表单有用
+            document.head
+            document.body 
+            childNodes 用来获取所有的孩子节点，包含换行节点/注释节点  /  children 用来获取所有的孩子节点，不包含换行节点/注释节点
+            firstChild 获取第1个孩子，需要考虑换行节点 / firstElementChild 获取第1个孩子  不包含换行节点 不兼容IE6,7,8
+            lastChild 获取最后1个孩子，需要考虑换行节点 / lastElementChild 获取最后1个孩子  不包含换行节点 不兼容IE6,7,8
+            previousSibling 获取前面的兄弟节点，需要考虑换行节点 /  previousElementSibling获取前面的兄弟节点，不包含换行节点 不兼容IE6,7,8 
+            nextSibling 获取后面的兄弟节点，需要考虑换行节点 /  nextElementSibling获取后面的兄弟节点，不包含换行节点 不兼容IE6,7,8 
+      
+    节点的分类：
+        元素节点  nodeType   1
+        属性节点  nodeType   2
+        文本节点  nodeType   3
+
+    事件类型：
+        鼠标事件，键盘事件，UI事件，表单事件，焦点事件
+
+    操作元素节点：
+        创建元素节点   document.createElement();
+        插入到DOM树  appendChild  insertBefore
+        克隆元素节点   cloneNode(true)
+        删除元素节点  removeChild()
+
+    操作属性节点：
+        DOM0：
+            获取属性节点： box.title
+            设置属性节点： box.title = "xxx"
+            对自定义属性无效
+        DOM1：
+            获取属性节点： getAttribute()
+            设置属性节点： setAttribute()
+            对自定义属性有效
+
+    操作文本节点：
+        innerHTML
+        innerText
+ -->
+</body>
+
+</html>

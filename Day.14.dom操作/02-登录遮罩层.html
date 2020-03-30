@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .cover{
+            position: absolute;
+            /* 遮罩层盛满页面 */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(180, 158, 158, 0.473);
+        }
+    </style>
+</head>
+<body>
+    <button id="click">点击出现遮罩层</button>
+
+    <script>
+        // 添加点击事件
+        var objBtn = document.getElementById("click");
+        // 点击事件制定一个方法
+        objBtn.onclick = function(){
+            // 创建一个节点
+            var objDiv = document.createElement("div");
+            // 节点上附上css属性
+            objDiv.className = "cover";
+            // 获得父节点并把创建的子节点添加上
+            document.body.appendChild(objDiv);
+        }
+    </script>
+</body>
+</html>

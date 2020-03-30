@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        ul li {
+            float: left;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid blue;
+            background-color: red;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script src="../jquery-1.11.3/jquery-1.11.3.min.js"></script>
+    <script>
+        // 原生js实现
+/*         let list = document.getElementsByTagName("li");
+        for (let i = 0; i < list.length; i++) {
+            list[i].onmouseenter = function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].style.backgroundColor = "red";
+                }
+                this.style.backgroundColor = "green";
+            }
+        } */
+
+        // JQuery实现，注意引包
+/*         $("li").mouseenter(function(){
+            $(this).css("background-color","green").siblings().css("background-color","red");
+        }); */
+    </script>
+</body>
+
+</html>

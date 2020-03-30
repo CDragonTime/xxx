@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            text-align: center;
+        }
+
+        ol li {
+            background-color: skyblue;
+            height: 20px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <button id="add">添加list</button>
+        <input type="text" id="inputText" value="">
+        <button id="remove">删除</button>
+    </div>
+    <ol id="addLi">
+    </ol>
+
+    <script>
+        var objAdd = document.getElementById("add");
+        var objText = document.getElementById("inputText");
+        var objRemove = document.getElementById("remove");
+        var objUl = document.getElementById("addLi");
+        // var count = document.getElementsByTagName("li").length;
+        // 直接使用计数器作为条件
+        var number = 0;
+        objAdd.onclick = function () {
+            number++
+            var objLi = document.createElement("li");
+            // 报错：.innerHTML is not a function
+            objLi.innerHTML = number;
+            objUl.appendChild(objLi);
+        }
+
+        objRemove.onclick = function () {
+            var content = objText.value;
+            // alert(objText.value);   
+            if (content != "") {
+                if(parseInt(content)){
+                    // 输入框输入的是String类型的
+                    // console.log(typeof content);
+                    // console.log(count);
+                    if(content <= number && content > 0){
+                        var liList = objUl.getElementsByTagName("li")
+                        objUl.removeChild(liList[content-1])
+                        // 改掉一个bug，删除之后数字范围还是原有的
+                        number--;
+                    }else{
+                        alert("输入的数字不符合要求")
+                    }
+                }else{
+                    alert("请输入数字")
+                }
+            } else {
+                alert("请输入删除的内容")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页面，服务段渲染</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blueviolet;
+        }
+        table{
+            margin: 10px auto;
+            text-align: center;
+            border: 2px solid greenyellow;
+        }
+        table th,table td{
+            padding: 2px 10px 2px 10px;
+            border: 1px solid skyblue;
+        }
+        table th{
+            background-color: tomato;
+        }
+        h2{
+            color: chocolate;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>学生信息管理系统</h1>
+    <h2><a href="/addHtml">添加新学生</a></h2>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>住处</th>
+        </tr>
+        <% for(var i=0; i<stuArr.length; i++){ %>
+            <tr> 
+                <td><%= stuArr[i].name %></td>
+                <td><%= stuArr[i].age %></td>
+                <td><%= stuArr[i].sex %></td>
+                <td><%= stuArr[i].provice %></td>
+            </tr>
+        <% } %>
+
+    </table>
+</body>
+</html>

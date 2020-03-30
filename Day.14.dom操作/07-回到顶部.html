@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+        html{
+            /* 是document的100% */
+            height: 100%;
+        }
+        body{
+            height: 300%;
+            background: -webkit-linear-gradient(top,gold,skyblue,pink);
+        }
+        img{
+            display: none;
+            position: fixed;
+            right: 10px;
+            top: 70%;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <img id="nav" src="./img/top.jfif" alt="">
+     </body>
+
+     <script>
+        let htmlDocument =  document.documentElement;
+        let clickPhoto = document.getElementById("nav");
+
+        // 图片显示
+        function hundle(){
+            let height = htmlDocument.scrollTop;
+            clickPhoto.style.display =  height >= htmlDocument.clientHeight? "block":"none";
+        }
+        window.onscroll = hundle;
+
+        // 触发点击事件
+        clickPhoto.onclick = function(){
+            clickPhoto.style.display = "none";
+            window.onscroll = null;
+            let step = 100;
+            let timer = setInterval(function(){
+                if(htmlDocument.scrollTop <= 0){
+                    htmlDocument.scrollTop = 0;
+                    // close(timer);
+                    clearInterval(timer);
+                    window.onscroll = hundle;
+                    return;
+                }
+                htmlDocument.scrollTop -= step;
+            },100)
+        }
+        
+     </script>
+</body>
+</html>

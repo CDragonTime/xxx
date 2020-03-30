@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;list-style-type: none;}
+        .nav{
+            width: 520px;
+            height: 280px;
+            border: 1px solid red;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .nav ul{
+            /* 不加相对定位，会导致后面元素的相对定位定位于此元素的后面 */
+            position: absolute;
+            width: 2600px;
+            height: 280px;
+        }
+        .nav li{
+            float: left;
+        }
+
+        /* 设置左右两个按键 */
+        .leftBtn,.rightBtn{
+            /* position: absolute;  可以让女标签变成男标签  所以不需要写display:block */
+            position: absolute;
+            width: 40px;
+            height: 100px;
+            background: url("./img/index.png") no-repeat 0 0;
+            top: 50%;
+            margin-top: -50px;
+            /* 设置透明度 */
+            opacity: 0.5;
+        }
+        .leftBtn {
+            left: 0;
+        }
+        .rightBtn {
+            right: 0;
+            background-position: -50px 0;
+        }
+    </style>
+</head>
+<body>
+        <div class="nav">
+            <ul>
+                <li><img src="./img/s1.jpg" alt=""></li>
+                <li><img src="./img/s2.jpg" alt=""></li>
+                <li><img src="./img/s3.jpg" alt=""></li>
+                <li><img src="./img/s4.jpg" alt=""></li>
+                <li><img src="./img/s5.jpg" alt=""></li>
+            </ul>
+            <a href="javascript:;" class="leftBtn" id="leftBtn"></a>
+            <a href="javascript:;" class="rightBtn" id="rightBtn"></a>
+        </div>    
+</body>
+</html>

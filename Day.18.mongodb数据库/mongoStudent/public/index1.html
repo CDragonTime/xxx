@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页面，服务段渲染</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: blueviolet;
+        }
+
+        table {
+            margin: 10px auto;
+            text-align: center;
+            border: 2px solid greenyellow;
+        }
+
+        table th,
+        table td {
+            padding: 2px 10px 2px 10px;
+            border: 1px solid skyblue;
+        }
+
+        table th {
+            background-color: tomato;
+        }
+    </style>
+    <script src="/jquery1.11.3.js"></script>
+</head>
+
+<body>
+    <h1>学生信息管理系统</h1>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>住处</th>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>42</td>
+            <td>345</td>
+            <td>435</td>
+        </tr>
+
+    </table>
+    <script>
+        $.get("/allStuJson", function (data) {
+            console.log(data.results)
+            for (var i = 0; i < data.results.length; i++) {
+                console.log(data.results[i]);
+            };
+        })
+    </script>
+</body>
+
+</html>

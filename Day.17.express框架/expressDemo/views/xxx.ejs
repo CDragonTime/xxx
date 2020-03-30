@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xxxx</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            border: 2px solid gold;
+            border-radius: 40px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <h1>在线注册系统</h1>
+    <p>请输入用户名：<input type="text" name="username"></p>
+    <p>请输入密码：<input type="password" name="password"></p>
+    <p><input type="submit" value="提交" id="sub"></p>
+    <a href="/allOrder">查看所有的订单信息</a>
+</div>
+</body>
+<script src="../jquery-1.11.3.min.js"></script>
+<script>
+    $("#sub").click(function(){
+        let username = $("input[name=username]").val();
+        let password = $("input[name=password]").val();
+        // jquery的ajax 服务端渲染没有跨域问题
+        // 第一个username表示名字也就是key，第二个表示真实数据
+        $.post("/save",{
+            username:username,password:password
+        },function(data){
+            if(data==1){
+                alert("数据提交成功")
+            }else{
+                alert("失败")
+            }
+        })
+    })
+</script>
+</html>

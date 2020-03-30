@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" href="style/base.css" type="text/css" />
+    <link rel="stylesheet" href="style/global.css" type="text/css" />
+    <title>LD Studio 留言板---很靠谱的留言板</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--  公共头部 -->
+        <div class="header">
+            <h1><a href="">LD Stuido留言板</a></h1>
+            <h2>很靠谱的留言板</h2>
+            <img src="images/hanoi.jpg" alt="" />
+            <ul>
+                <li><a href="index.php">首页</a></li>
+                <li><a href="about.php">关于</a></li>
+            </ul>
+        </div>
+
+
+        <div class="main">
+            <div class="content">
+                <!--
+				<div class="msg">
+					<h2>留言标题</h2>
+					<p>发表于<a href="">2012年5月29日</a> 由 <a href="">admin</a></p>
+					<p>留言内容</p>
+				</div>
+				-->
+
+                <!-- 动态的读取留言内容，然后输出 -->
+                <div class="msg">
+                    <h2>LAMP架构</h2>
+                    <p>发表于<a href="">2012-06-01 08:51:17</a> 由 <a href="">王者归来</a></p>
+                    <p>爱生活，爱设计，专注LAMP架构~！
+                    </p>
+                </div>
+                <div class="msg">
+                    <h2>JavaScript程序设计</h2>
+                    <p>发表于<a href="">2012-05-31 10:54:34</a> 由 <a href="">袁承志</a></p>
+                    <p>曾经的草根语言，如今可是风光无限啊~！
+                    </p>
+                </div>
+                <div class="msg">
+                    <h2>CSS样式</h2>
+                    <p>发表于<a href="">2012-05-31 10:52:09</a> 由 <a href="">小龙女</a></p>
+                    <p>现代网页设计的新宠。
+                    </p>
+                </div>
+                <div class="msg">
+                    <h2>XTHML结构</h2>
+                    <p>发表于<a href="">2012-05-31 10:44:01</a> 由 <a href="">郭靖</a></p>
+                    <p>傻大个，学XHTML正合适。
+                    </p>
+                </div>
+                <div class="msg">
+                    <h2>Apache服务器</h2>
+                    <p>发表于<a href="">2012-05-31 10:43:33</a> 由 <a href="">陈家洛</a></p>
+                    <p>世界上使用最大的网页服务器软件。
+                    </p>
+                </div>
+                <div class="msg">
+                    <h2>Linux操作系统</h2>
+                    <p>发表于<a href="">2012-05-31 10:42:49</a> 由 <a href="">杨过</a></p>
+                    <p>呵呵，要学计算机，就选linux系统。
+                    </p>
+                </div>
+                <div class="msg">
+                    <h2>MySQL数据库</h2>
+                    <p>发表于<a href="">2012-05-31 10:41:16</a> 由 <a href="">令狐冲</a></p>
+                    <p>很好的数据库。
+                    </p>
+                </div>
+                <div class="msg">
+                    <h2>﻿PHP编程语言</h2>
+                    <p>发表于<a href="">2012-05-31 10:39:23</a> 由 <a href="">东方不败</a></p>
+                    <p>PHP，真强大，好的很
+                    </p>
+                </div>
+                <div class="msg_form">
+                    <h2>发表留言</h2>
+                    <form action="/dopublish" method="POST">
+                        <ul>
+                            <li>
+                                <label for="">标题：</label>
+                            </li>
+                            <li>
+                                <input type="text" name="title" class="txt" />
+                            </li>
+                            <li>
+                                <label for="">作者：</label>
+                            </li>
+                            <li>
+                                <input type="text" name="author" class="txt" />
+                            </li>
+                            <li>
+                                <label for="">内容：</label>
+                            </li>
+                            <li>
+                                <textarea name="content" id="" cols="70" rows="5"></textarea>
+                            </li>
+                            <li>
+                                <input type="submit" value="提 交" name="btn" class="btn" />
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="sidebar">
+                <h2>最新留言</h2>
+                <ul>
+                    <li><a href="">LAMP架构</a></li>
+                    <li><a href="">JavaScript程序设计</a></li>
+                    <li><a href="">CSS样式</a></li>
+                    <li><a href="">XTHML结构</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+        <!-- 公共底部 -->
+        <div class="footer">
+            <p><a href="">LD Studio</a> &copy; 2009-2012 版权所有</p>
+        </div>
+    </div>
+</body>
+
+</html>

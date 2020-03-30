@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="father" id="father"><div class="son">
+            <h1>HELLO DOM</h1>
+            <h1>HELLO DOM</h1>
+        </div>
+        <div class="son1">
+            <h1 id="son1">HELLO DOM1</h1>
+        </div>
+        <div class="son2">
+            <h1>HELLO DOM2</h1>
+        </div>
+        <ul id="ul1">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul id="ul2">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <script>
+        // console.log(document)
+
+        // 得到document中的father的div
+        // var father = document.getElementById("father");
+        // console.log(father)
+        // window.BeforeUnloadEvent(
+        //     alert("页面刷新了。。。")
+        // )
+        // console.log(window)
+
+/*         var a = document.getElementById("father");
+        // 获取第一个子节点元素
+        console.log(a.firstChild);
+        console.log(a.firstElementChild);
+        console.log("--------------------------");
+        // 获取最后一个子节点元素
+        // nodeType==1时才是元素节点，2是属性节点，3是文本节点
+        // 为什么得到的不是元素节点，因为回车的原因，回车也是文本
+        // 把中间的文本空格或者换行去掉就可以得到元素了
+        // nodeType查看一个节点类型
+        console.log(a.lastChild.nodeType); //3
+        console.log(a.lastElementChild.nodeType);//1
+        console.log("--------------------------");
+        // 把节点内的数据以文本的形式输出
+        console.log(a.firstElementChild.innerHTML);
+ */
+
+/*         var a = document.getElementById("son1");
+        console.log(a.parentNode)
+        console.log(a.parentElement)
+        // 得到的是一个伪数组，但是可以通过下标来得到标签元素
+        var a1 = document.getElementsByTagName("h1")
+        console.log(a1[2].innerHTML);
+        console.log(a1[2]);
+        // 得到指定ul中的指定li */
+
+
+        var ul1 = document.getElementById("ul1");
+        var liList = ul1.getElementsByTagName("li");
+        console.log(ul1);
+        console.log(liList);
+        for(var i = 0; i < liList.length; i++){
+            console.log(liList[i]);
+        }
+        
+
+    </script>
+</body>
+</html>
+<!-- 
+    Dom 
+    document object Model
+    Document html文档
+    object 对象：标签、元素都是对象
+    html标签上面，还有一个document对象
+
+    Dom版本：
+        dom0：各大浏览器厂商制定的标准
+        w3c组织成立后，采用了dom0的标准
+        dom1，dom2，dom3    都是由w3c制定
+
+    dom0：
+        定义了很多的属性和方法，都是在document对象上面
+        document.write()
+        document.body   //获取整个body
+
+    dom1：
+        树模型中节点结构
+            常用的节点：元素节点，属性节点，文本节点
+            可以通过nodeType的返回值查看节点类型
+            nodeType返回值：
+                1：表示节点是元素节点
+                3：表示文本节点
+                2：属性节点
+        相关的属性和方法
+
+    
+
+    ECMAScript：
+        ECMA组织制定的标准
+ -->

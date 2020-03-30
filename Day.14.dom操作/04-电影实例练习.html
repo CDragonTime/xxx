@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .filmTable {
+            margin: 80px auto;
+            width: 300px;
+            height: 200px;
+            /* border: 1px solid red; */
+        }
+
+        .filmTable button {
+            display: block;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: white;
+            width: 100px;
+            height: 30px;
+            border: 0px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        table {
+            margin: 0 auto;
+            border: 2px solid gold;
+            border-radius: 10px;
+            border-collapse: collapse;
+        }
+
+        .filmTable td,
+        th {
+            padding: 5px;
+            border: 2px solid gold;
+            border-radius: 6px;
+            color: black;
+        }
+
+        thead {
+            background-color: skyblue;
+        }
+
+        /*  -----------------------------遮罩层css */
+        .allColor {
+            /* 让遮罩层隐藏掉 */
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(248, 245, 49, 0.274);
+        }
+
+
+        /*  -----------------------------输入框css */
+        .inputFilm {
+            background-color: white;
+            display: none;
+            line-height: 36px;
+            /* border: 1px solid red; */
+            width: 350px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            right: 0;
+            bottom: 0;
+            margin-top: -100px;
+            margin-left: -175px;
+            border-radius: 10px;
+        }
+
+        .inputFilm h3 {
+            background-color: rgba(75, 252, 252, 0.753);
+            text-align: center;
+        }
+
+        .inputFilm div {
+            margin: 10px;
+        }
+
+        .inputFilm input {
+            width: 200px;
+            height: 20px;
+        }
+
+        .inputFilm button {
+            margin: 10px auto;
+            display: block;
+            background-color: skyblue;
+            color: white;
+            width: 100px;
+            height: 30px;
+            border: 0px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .inputFilm span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: bolder;
+            margin-right: 3px;
+            /* 鼠标放上的效果 */
+            cursor: pointer;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filmTable">
+        <button id="addFilm">添加电影</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>电影名称</th>
+                    <th>领衔主演</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td>测试一</td>
+                    <td>测试</td>
+                    <!-- 去除默认事件 -->
+                    <td><a href="javascript:;">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="allColor" id="allColorId"></div>
+    <div class="inputFilm" id="inputFilmId">
+        <h3>请输入添加电影相关信息</h3>
+        <div>
+            <label for="filmName">电影名称</label>
+            <input type="text" id="filmName" placeholder="请输入电影名称">
+        </div>
+        <div>
+            <label for="filmPerson">领衔主演</label>
+            <input type="text" id="filmPerson" placeholder="请输入主演">
+        </div>
+        <button id="submit">提交</button>
+        <span id="close">X</span>
+    </div>
+    <script>
+        var addFilm = document.getElementById("addFilm");
+        var close = document.getElementById("close");
+        var submit = document.getElementById("submit");
+        var filmName = document.getElementById("filmName");
+        var filmPerson = document.getElementById("filmPerson");
+        var list = document.getElementsByTagName("a");
+        var tbody = document.getElementById("tbody");
+
+        // 设置删除按钮
+        for (let i = 0; i < list.length; i++) {
+            list[i].onclick = function () {
+                tbody.removeChild(this.parentElement.parentElement);
+                // alert("暂停")
+            }
+        }
+
+        // 设置X按钮
+        close.onclick = function () {
+            allColorId.style.display = "none"
+            inputFilmId.style.display = "none"
+        }
+
+        // 设置添加电影按钮
+        addFilm.onclick = function () {
+            allColorId.style.display = "block"
+            inputFilmId.style.display = "block"
+        }
+
+        // 设置提交信息按钮
+        submit.onclick = function () {
+            // 创建其中一行的数据
+            if (filmName.value && filmPerson.value) {
+                // 创建tr 
+                let tr = document.createElement("tr");
+                tbody.appendChild(tr);
+                // 利用for循环一次性创建3个td
+                for (let i = 0; i < 3; i++) {
+                    let td = document.createElement("td");
+                    tr.appendChild(td)
+                    if (i == 0) {
+                        td.innerHTML = filmName.value;
+                    } else if (i == 1) {
+                        td.innerHTML = filmPerson.value;
+                    } else {
+                        let a = document.createElement("a");
+                        a.href = "javascript:;"; // 阻止默认事件的
+                        a.innerHTML = "删除";
+                        a.onclick = function () {
+                            tbody.removeChild(this.parentElement.parentElement)
+                        }
+                        td.appendChild(a);
+                    }
+                }
+                filmName.value = filmPerson.value = "";
+
+                allColorId.style.display = "none"
+                inputFilmId.style.display = "none"
+            } else {
+                alert("输入的信息不全")
+            }
+        }
+    </script>
+</body>
+
+</html>

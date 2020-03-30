@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">box</div>
+</body>
+<script>
+    function animate(obj, target) {
+        clearInterval(obj.timer)
+        // 直接定义属性
+        obj.timer = setInterval(function () {
+            let step = 10;
+            let current = obj.offsetLeft;
+            step = step >= current ? step : -step;
+            if (Math.abs(target - current) >= Math.abs(step)) {
+                // 距离目标的距离至少 还大于 一个步长的距离
+                current += step;
+                obj.style.left = current + "px";
+            } else {
+                // 距离目标的距离 小于一个步长的距离 将要接过目标
+                obj.style.left = target + "px";
+                clearInterval(obj.timer);
+            }
+        } , 17)
+    }
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 300%;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 2px solid green;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .son {
+            width: 50px;
+            height: 50px;
+            border: 1px solid blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <div class="son" id="son">son</div>
+    </div>
+    <script>
+        /*          // 写一些颜色变化,body写为300%获取不到高度
+                    console.log(document.documentElement.clientHeight)
+                    // body写为300% 获取的时候为空
+                    console.log(document.querySelector("body").style.height) */
+        let boxCenter = function () {
+            var color = 0;
+            // var h = document.documentElement.clientHeight;
+            // var w = document.documentElement.clientWidth;
+            // 输出当前页面的宽高
+            // console.log(h, w);
+            var box = document.getElementById("box");
+            box.style.position = "absolute";
+            // 注意单位    document.documentElement.clientHeight - box.offsetHeight的值都是不带单位的
+            box.style.top = ((document.documentElement.clientHeight - box.offsetHeight) / 2 + document.documentElement.scrollTop) + "px";
+            box.style.left = (document.documentElement.clientWidth - box.offsetWidth) / 2 + "px";
+            /*         if(document.documentElement.scrollTop > scrollColor){
+                color += 5;
+                box.style.backgroundColor = "rgb("+color+","+color+","+color+")";
+            }else{
+                color -= 5;
+                box.style.backgroundColor = "rgb("+color+","+color+","+color+")";
+            } */
+        }
+
+        window.onresize = boxCenter;
+        window.onscroll = boxCenter;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= number %>数字查询结果 - 因数计算器</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css"></head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">因数计算器</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				 <ol class="breadcrumb">
+				  <li><a href="/">首页</a></li>
+				  <li class="active"><a href="#">查询结果</a></li>
+				</ol>
+
+				<p><%= number %>数字的因数如下（查询用时：<%= during %>毫秒）</p>
+				<ul>
+					<% for(var i=0; i<result.length; i++){  %>
+						<li><%= result[i] %></li>
+					<% } %>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	 
+</body>
+</html>

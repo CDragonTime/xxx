@@ -1,0 +1,106 @@
+<!DOCTYPE html>DOM2核心是事件， DOM3表单验证，DOM3比较前卫。
+<!-- 了解事件：
+    DOM中常见的事件类型：
+        鼠标事件：click mouseover mouseout mousedown mouseup mousemove...
+        键盘事件：keydown keyup keyPress
+        焦点事件：focus blur
+        表单事件：submit reset change input
+        UI事件：load unload beforeLoad select resize scroll
+        ....
+
+    事件三要素：
+        事件源：事件发生在哪个元素节点上，这个元素节点就是事件源
+        事件类型：如下说的事件类型
+        监听器（事件处理程序）: 当事件发生时，做什么，通常使用函数来模拟
+
+    事件绑定：
+        在某个事件源上，绑定一个事件，就是事件绑定。也分三类：
+        HTML级别的事件绑定：
+            <button onclick="alert('html级别的事件绑定')">点击</button>
+        DOM0级的事件绑定：
+             div.onclick = function(){
+                alert("点击事件")
+             }
+             不足：只能绑定一个监听器，是基于给onclick属性赋值的方式
+        DOM2级的事件绑定：
+             div.addEventListener("click",function(){
+                alert("1")
+             });
+             可以绑定多个监听器，是基于事件池机制
+             项目中通常使用DOM2级的事件绑定方式，学习为了方法，就使用DOM0级事件绑定。 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 600px;
+            background-color: skyblue;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            margin: 40px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">测试box
+        <div class="son">
+            测试son
+        </div>
+    </div>
+
+        <input type="text" id="username">
+    <script>
+        /*         //  鼠标事件：click mouseover mouseout mousedown mouseup mousemove...
+            let div = document.getElementById("box");
+            div.onclick = function(){ console.log("点击事件~") }
+            div.onmouseover = function(){ console.log("鼠标进入~") }
+            div.onmouseout = function(){ console.log("鼠标离开~") }
+            // mousedown/onmouseup 不管按鼠标上哪一个键都会触发此事件
+            div.onmousedown = function(){ console.log("鼠标按下去~") }
+            div.onmouseup = function(){ console.log("鼠标抬起~") }
+            div.onmousemove = function(){ console.log("鼠标移动~") }
+         */
+        // 表单事件
+        // 。。。
+
+/*         // onfocus获取焦点 onblur失去焦点
+        let username = document.getElementById("username");
+        username.onfocus = function () {
+            console.log("获取到了焦点")
+        }
+        username.onblur = function () {
+            console.log("失去了焦点")
+        } */
+
+         //  UI事件：load unload beforeunload select resize scroll
+        //  load事件  页面中所有的资源都加载完后触发
+        //  unload事件  页面卸载时触发unload事件，很难捕捉到
+        //  beforeunload 页面卸载之前,会触发beforeunload事件
+        // select 当选中了内容时触发
+        // resize 当改变了浏览器窗口大小时触发  用的不多
+        // scroll  当页面中的滚动条滚动时触发  用的相当多
+        let username = document.getElementById("username");
+        username.onselect = function(){
+            console.log("选中了...")
+        }
+        window.onresize = function(){
+            console.log("浏览器的容器改变了")
+        }
+        window.onscroll = function(){
+            console.log("滚动条滚动了....")
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+                 *{ margin: 0; padding: 0; }
+         ol{ list-style-type: none; }
+         li{
+             width: 50px;
+             height: 50px;
+             line-height: 50px;
+             text-align: center;
+             border: 6px solid skyblue;
+             border-radius: 50%; /* 让边框变圆 */
+             float: left;
+             background-color: #CCC;
+         }
+         li:hover{
+             cursor: pointer;
+         }
+         .on{
+             background-color: gold;
+             border: 6px solid lawngreen;
+             border-radius: 0%; /* 让边框变圆 */
+         }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>  
+    
+    <script>
+        var liList = document.getElementsByTagName("li");
+        for(let li = 0;li<liList.length; li++){
+            liList[li].onclick = function(){
+                for(let i = 0;i<liList.length; i++){
+                    // 操作css类  添加一个css类 相当于添加class="on"
+                    liList[i].className = ""
+                }
+                // this  表示事件源，在剪头函数里面意义不同，指定的就是liList[li]
+                this.className = "on"
+            }
+        }
+    </script>
+</body>
+</html>

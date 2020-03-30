@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 300%;
+            /* 设置渐变色 */
+            background: -webkit-linear-gradient(top, gold, skyblue, pink);
+        }
+
+        img {
+            display: none;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 10px;
+            top: 80%;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./img/top.jfif" id="photo" alt="">
+    <script>
+        let htmlDocument = document.documentElement;
+        let button1 = document.querySelector("img");
+        button1.onclick = function () {
+            button1.style.display = "none";
+            window.onscroll = null;
+            // 分析问题,方式出现混淆，不是通过body获取，而是html获取卷值
+            // console.log(document.body.scrollTop)
+            // console.log(htmlDocument.scrollTop)
+            // console.log(document.querySelector("html").scrollTop)
+            let step = 100;
+            let a = setInterval(function () {
+                htmlDocument.scrollTop -= step;
+                if(htmlDocument.scrollTop <= 0){
+                    htmlDocument.scrollTop = 0;
+                    window.onscroll = disappear;
+                    // alert("????")
+                    clearInterval(a);
+                    return;
+                }
+            }, 70)
+        }
+
+        let disappear = function(){
+            button1.style.display = htmlDocument.scrollTop > htmlDocument.clientHeight ? "block":"none";
+        }
+        window.onscroll = disappear;
+    </script>
+</body>
+
+</html>
