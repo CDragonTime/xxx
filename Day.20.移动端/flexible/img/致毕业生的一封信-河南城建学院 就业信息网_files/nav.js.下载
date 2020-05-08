@@ -1,0 +1,16 @@
+﻿function init_nav(id) {
+    //var main = ;
+    var titles = $("#" + id).find('.nav-single');
+
+    for (i = 0; i < titles.length; i++) {
+        $(titles[i]).hover(dropdownshow, dropdownhide);
+    }
+}
+
+function dropdownshow() {
+    $(this).find('.nav-dropdown').addClass('nav-dropdown-active');
+}
+
+function dropdownhide() {
+    $(this).find('.nav-dropdown').removeClass('nav-dropdown-active');
+}

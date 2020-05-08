@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{color: red;}
+        .green{color: green;}
+        .yellow{background-color: yellow;}
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <h1 :class="{green:flag}">{{name}}</h1>
+        <h1 :class="{green:!flag}">{{name}}</h1>
+        <h1 :class="{green:flag,yellow:flag}">{{name}}</h1>
+        <h1 :class="['red','yellow']">{{name}}</h1>
+        <h1>{{name}}</h1>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        let app = new Vue({
+            // 指定dom标签容器的选择器
+            el:"#box1",
+            data(){
+                return{
+                    name:"测试用例",
+                    box1:box1,
+                    flag:true
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

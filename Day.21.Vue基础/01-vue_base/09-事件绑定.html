@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box">
+        <!-- 可以在调用监听器方法的时候传入参数 -->
+        <button v-on:click="test(123)">测试v-on绑定事件</button>
+        <button v-for="(item,index) in 6" v-on:click="test(item)">测试v-on绑定事件动态参数{{item}}</button>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <!-- v-on:可以简写为@ -->
+        <button @click="doshow = !doshow">{{doshow?"展开":"收起"}}</button>
+        <p v-show="!doshow">符合当时看见佛挡杀佛色点击付款合计罚款好看考核表看个结果1vb1g1hjg1v
+            11hj1b1hb11b1h111似懂非懂手机归属地积分哈哈jhsdsddfgdfgfdgdfgdfg</p>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        let app = new Vue({
+            // 指定dom标签容器的选择器
+            el:"#box",
+            data(){
+                return{
+                    name:"测试用例",
+                    doshow:true
+                }
+            },
+            // 监听器一定要写到methods内
+            methods:{
+                test(a){
+                    alert("test被绑定了")
+                    alert(a)
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

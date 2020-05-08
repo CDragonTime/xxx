@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <!-- 在父组件中使用子组件，传递给子组件值，使用属性 -->
+        <!-- 下面的数据是从根组件获取的来的 -->
+        <ol>
+            <li v-for="item in todo">{{item}}</li>
+        </ol>
+        <!-- 定义一个事件，可以看作在父中的一个事件 子触发了此事件，就会触发父的监听器-->
+        <son1 @sontofather="addMsg"></son1>
+    </div>
+<hr>
+<hr>
+<hr>
+    <template id="son1">
+        <div>
+            <h1>这是一个子组件,准备添加</h1>
+            <input type="text" v-model="text1">
+            <button @click="show">添加</button>
+        </div>
+    </template>
+    <script src="./01-vue_base/js/vue.js"></script>
+    <script>
+        // 子组件
+        let son1 = {
+            template:"#son1",
+            data(){
+                return{
+                    name:"我是子组件的name",
+                    // 要想修改传过来的数据，并且只修改子组件本身的数据
+                    data:this.xx,
+                    text1:""
+                }
+            },
+            // 通过props接受参数，指定参数类型,接受了参数就可以在子组件中使用
+            props:{
+                // xx:String        
+                //使用这种方式如果添加了require=true，就意思数据必须要传过来
+                xx:{type:String,default:"使用默认数据"}
+            },
+            methods:{
+                show(){
+                    // 手动触发自定义事件
+                    this.$emit("sontofather",this.text1)
+                    this.text1 = ""
+                }
+            }
+        }
+        // 根组件
+        let app = new Vue({
+            el:"#box",
+            data(){
+                return{
+                    todo:["未完成的事1","未完成的事2","未完成的事3","未完成的事4"]
+                }
+            },
+            components:{
+                son1,
+            },
+            methods:{
+                addMsg(value){
+                    this.todo.push(value)
+                    alert("添加"+value+"成功")
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

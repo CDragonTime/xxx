@@ -1,0 +1,53 @@
+﻿/*
+    友情链接
+*/
+
+.friendlink-group {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.friendlinksimple-main {
+    cursor: pointer;
+    float: left;
+    width: 270px;
+    margin: 30px 65px;
+    position: relative;
+    height: 40px;
+    background-color: inherit;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    border:1px solid #aaa;
+}
+
+    .friendlinksimple-main ul {
+        width: 270px;
+        background-color: #ffffff;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        z-index: 99999;
+        display: none;
+        box-shadow: -1px -1px 10px #cccccc;
+    }
+        .friendlinksimple-main ul li {
+            line-height: 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 14px;
+            border-bottom: 1px solid #ccc;
+        }
+    .friendlinksimple-main ul li a{
+         color:#333333;
+         display:inline-block;
+         width:100%;
+    }
+.friendlink-group:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+

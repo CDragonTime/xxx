@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box">
+        <!-- v-bind:是绑定一个数据,可以简写为：,后面的""就当做script标签来看 -->
+        <a v-bind:href="http">{{name=="教师"?"是教师":"是学生"}}</a>
+        <!-- 使用方法 -->
+        <h1>{{test(age,studyTime)}}</h1>
+        <!-- 使用计算属性 -->
+        <h1>{{add}}</h1>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        let app = new Vue({
+            // 指定dom标签容器的选择器
+            el:"#box",
+            data(){
+                return{
+                    name:"教师",
+                    http:"http://www.baidu.com",
+                    age:16,
+                    studyTime:10
+                }
+            },
+            methods:{
+                test(age,studyTime){
+                    return age+studyTime;
+                }
+            },
+            computed:{
+                add(){
+                    return this.age+this.studyTime
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

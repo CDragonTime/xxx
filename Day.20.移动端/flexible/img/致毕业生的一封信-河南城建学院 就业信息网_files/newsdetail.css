@@ -1,0 +1,151 @@
+﻿#centerFrame .box {
+    width: 1200px;
+    color:#333333;
+    margin:0 auto;
+    margin-bottom:30px;
+    min-height:500px;
+    
+}
+    #centerFrame .box:after{
+        display:block;
+        clear:both;
+        content:"";
+    }
+    #emptyPage {
+        width: 998px;
+        height: 450px;
+        background-image: url(../images/images-details/emptyPage.png);
+        background-size: cover;
+        padding-top: 320px;
+    }
+
+.newsXiang {
+/* padding: 20px; */
+font-size: 14px;
+line-height: 25px;
+color: #666666;
+width: 998px;
+margin: 0 auto;
+}
+/*�༭���������*/
+table[align="center"] {
+    margin: 0 auto;
+}
+#yinFrame {
+    width: 100%;
+    overflow: hidden;
+   
+}
+.teacher_list_right {
+    float: right;
+    width: 1000px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    border-radius: 5px;
+    min-height: 500px;
+    white-space: normal;
+    word-break: break-all;
+}
+
+
+
+.newsXiang .yinfanhui a {
+    margin-left: 0px;
+}
+
+.newsXiang a {
+    height: 35px;
+    line-height: 35px;
+    border-radius: 3px;
+}
+
+.yinRight {
+    margin:0 auto;
+    width:998px;
+    
+    background-color: #fff;
+}
+
+
+
+.newsXiang h4 {
+    font-size: 22px;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+    line-height: 65px;
+    color: black;
+    font-weight: bold;
+    width:100%;
+}
+
+.newsXiang .nw_p1 {
+    margin: 20px 0;
+    text-align: center;
+    width: 998px;
+}
+
+    .newsXiang .nw_p1 img {
+        width: 25px;
+        height: 25px;
+        margin: 0px 5px;
+        margin-top: -4px;
+        vertical-align: middle;
+    }
+
+    .newsXiang .nw_p1 span {
+        display: inline-block;
+        line-height:25px;
+        font-size: 14px;
+        font-weight: inherit;
+    }
+
+.nw_p1 span{
+    min-width:60px;
+}
+
+.teacher_list_right .newat {
+    margin: 0 auto;
+    width: 998px;
+}
+
+.newat.on {
+    display: block;font-size:14px;color:#333333;line-height:30px;padding:30px;
+}
+/*.newat.on  p{
+    text-indent:2em;
+}*/
+
+.newsXiang p span {
+    font-weight: unset;
+    word-wrap: break-word;
+}
+
+.newsXiang a {
+    color: #666666;
+    
+}
+.erji {
+    width: 330px !important;
+}
+th{
+    padding:10px;
+}
+td {
+    padding: 10px;
+}
+tbody{
+    width:730px;
+}
+table {
+    width: 730px;
+}
+    
+    table, table tr th, table tr td {
+        border: 1px solid #999999;
+    }
+.fileContainer {
+    padding:10px 30px 30px 30px;
+}
+.yinRightContent div img {
+    max-width: 100%;
+}

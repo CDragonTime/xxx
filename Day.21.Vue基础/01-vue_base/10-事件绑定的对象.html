@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box">
+        <button @click="test(123,$event)">测试v-on绑定事件</button>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        let app = new Vue({
+            // 指定dom标签容器的选择器
+            el:"#box",
+            data(){
+                return{
+
+                }
+            },
+            // 监听器一定要写到methods内
+            methods:{
+                // event是传过来的事件对象，取消默认事件可以用event.preventDefault（）
+                // 或者行内写上javascript:;
+                // vue中直接可以使用@click.prevent阻止默认事件
+                test(a,event){
+                    alert(event)
+                    alert(a)
+                }
+                // 
+            }
+        });
+
+    </script>
+</body>
+</html>

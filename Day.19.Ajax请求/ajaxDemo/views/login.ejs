@@ -10,7 +10,7 @@
         <ul>
             <li>
                 <label for="">用户名：</label>
-                <input type="text" name="username">
+                <input type="text" name="username" id="username"><span id="text"></span>
             </li>
             <li>
                 <label for="">密码:</label>
@@ -27,4 +27,31 @@
         </ul>
     </form>
 </body>
+<script>
+    let user = document.getElementById("username");
+    let text = document.getElementById("text");
+
+    // console.log()没有问题，只是浏览器console的搜索里面有文字
+/*     user.onblur = function(){
+        let username = encodeURIComponent(this.value);
+        // +"time="+new Date()
+        // 第一步：创建xhr对象
+        let xhr = new XMLHttpRequest();
+        // alert(xhr);console.log(xhr)
+        console.log(xhr.readyState)
+        // 第二步：写出请求方式和地址
+        xhr.open("get","/check?username="+username);
+        console.log(xhr.readyState)
+        // 第三部：监听返回返回结果的变化状态
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState)
+            if(xhr.readyState == 4 && xhr.status == 200){
+                text.innerHTML = xhr.responseText;
+            }
+        }
+        xhr.send(null);
+    } */
+
+    
+</script>
 </html>

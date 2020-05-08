@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <son1></son1>
+        <!-- <my-test></my-test> -->
+    </div>
+<hr>
+<hr>
+<hr>
+<!-- 子组件不显示在当前页面，父组件调用显示 -->
+    <template id="son1">
+        <div>
+            <h1>这是一个子组件</h1>
+            <h2>{{name}}</h2>
+        </div>
+    </template>
+    <script src="./01-vue_base/js/vue.js"></script>
+    <script>
+        Vue.component("my-test",{
+            template:"<div>这是一个全局子组件</div>"
+        })
+
+        let son1 = {
+            template:"#son1",
+            data(){
+                return{
+                    name:"我是子组件的name"
+                }
+            }
+        }
+
+        // 根组件
+        let app = new Vue({
+            // 指定dom标签容器的选择器
+            el:"#box",
+            data(){
+                return{
+                    name:"测试用例"
+                }
+            },
+            components:{
+                // 名字一样在es6中可以只写一个
+                son1,
+            }
+        });
+
+    </script>
+</body>
+</html>

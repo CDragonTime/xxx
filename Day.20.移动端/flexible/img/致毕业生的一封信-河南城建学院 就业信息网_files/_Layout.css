@@ -1,0 +1,1247 @@
+/*
+    layout颜色控制参数
+
+    主题色：#005bac 深蓝
+    #0c73c3 浅蓝  日历
+
+    #025095侧边栏
+    
+*/
+#nav {
+    width: 1000px !important;
+}
+
+.slick-slide div > a {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-container {
+    background-color: #005bac;
+}
+
+.nav-level1:hover {
+    color: #005bac !important;
+}
+
+.nav-level2:hover {
+    color: #005bac !important;
+}
+
+.nav-level3:hover span {
+    background: #005bac;
+}
+
+.calendar-main {
+    margin-left: 45px;
+}
+
+#iCalendar a.dayon {
+    background: #005bac !important;
+    border: 3px solid #0c73c3;
+    color: #ffffff !important;
+}
+
+.calendarBox {
+    border-bottom: 1px solid #dddddd;
+}
+
+.calendarTitle {
+    color: #005bac;
+}
+
+#iCalendar a.dayon {
+    background: #15820a;
+}
+
+.articlesimplelist-infoTitle a:hover {
+    color: #005bac;
+}
+
+.positionsimplelist-infoTitle a:hover {
+    color: #005bac;
+}
+
+.milkroundsimplelist-infoTitle a:hover {
+    color: #005bac;
+}
+
+.campustalksimplelist-infoTitle a:hover {
+    color: #005bac;
+}
+
+.tablist-header {
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabslider-title li {
+    color: #005bac;
+}
+
+.sliderBottom-container .job-guide {
+    border-bottom: 1px solid #005bac;
+    color: #005bac;
+}
+
+#slider-side .slick-active {
+    background-color: #005bac !important;
+}
+
+#logins li:hover {
+    background-color: #15820a;
+}
+
+.bottom-logo {
+    border-right: 1px solid #ffffff;
+}
+
+.contact-info {
+    border-right: 1px solid #ffffff;
+}
+
+.scenery-title p {
+    color: #005bac;
+    border-left: 6px solid #005bac;
+}
+
+.fixed-module .fixed-content .share-module {
+    background-color: #005bac;
+}
+
+.fixedActive {
+    background-color: #025095;
+}
+
+.download-code {
+    background-color: #005bac;
+}
+
+    .download-code .triangle {
+        border-left: 15px solid #005bac;
+    }
+
+.friendlinksimple-main ul {
+    background: #005bac !important;
+}
+
+/*
+    面包屑导航
+*/
+
+.breadcrumb {
+    background-color: inherit !important;
+    width: 1200px;
+    margin: 10px auto;
+    padding: 8px 0;
+}
+
+    .breadcrumb a {
+        display: inline-block;
+        text-align: center;
+    }
+
+/*头部 header*/
+
+
+.layout-top {
+    height: 184px;
+}
+
+.top-container {
+    height: 130px;
+    background-image: url(../images/images-header/top-background.png);
+    background-size: 100% 100%;
+}
+
+    .top-container > .top-logo {
+        width: 1200px;
+        height: 130px;
+        margin: 0 auto;
+        background-image:url(../images/images-header/top.png);
+    }
+        .top-container > .top-logo .logo-name > a {
+            display: inline-block;
+            cursor:default;
+        }
+
+        .top-container > .top-logo .logo-name > .logo-icon {
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        .top-container > .top-logo .logo-name > a > img {
+            width: 363px;
+            height: 85px;
+        }
+
+        .top-container > .top-logo .logo-name {
+            float: left;
+        }
+
+        .top-container > .top-logo:after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+
+
+
+.nav-container {
+    height: 54px !important;
+}
+
+    .nav-container .nav-content {
+        height: 54px !important;
+        position: relative;
+    }
+
+.nav-main {
+    float: left;
+}
+
+    .nav-main .nav-list {
+        height: 54px !important;
+    }
+
+        .nav-main .nav-list .nav-single {
+            width: 98px !important;
+            height: 54px !important;
+            line-height: 54px !important;
+        }
+
+.nav-dropdown {
+    background-color: #ffffff;
+    box-shadow: 7px 7px 20px #999999;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.nav-level1 {
+    color: #ffffff !important;
+    width: 98px !important;
+    height: 54px !important;
+    line-height: 54px !important;
+    font-size: 16px;
+}
+
+.nav-dropdown a span {
+    width: 98px;
+}
+
+.nav-level2 {
+    width: 98px !important;
+    font-size: 14px;
+    color: #565656 !important;
+    font-weight: bold;
+}
+
+.nav-level3 {
+    width: 110px !important;
+    font-size: 14px;
+    color: #666666 !important;
+}
+
+.nav-level1:hover {
+    background: #ffffff;
+}
+
+    .nav-level1:hover > span {
+        border: none;
+        box-shadow: none;
+    }
+
+
+
+
+.nav-level3:hover span {
+    color: #ffffff !important;
+    width: 98px;
+    height: 36px;
+    line-height: 36px;
+    margin: 7px 0px;
+    border-radius: 2px;
+}
+
+.nav-single {
+    font-size: 14px !important;
+}
+
+.inp-search {
+    float: right;
+    margin-top: 12px;
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    text-indent: 20px;
+    outline: none;
+}
+
+.nav-container .nav-content:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+* {
+    font-family: "微软雅黑",'Microsoft YaHei';
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+
+/*.nav-container {
+    background: #9e2926;
+}*/
+
+/*轮播图*/
+
+
+
+
+/*登录*/
+.users-login {
+    padding-top: 30px;
+}
+
+    .users-login .login-list {
+        margin: 0 auto;
+        width: 1000px;
+    }
+
+.login-list div {
+    float: left;
+    width: 440px;
+    height: 100px;
+    border-radius: 10px;
+    line-height: 100px;
+    padding: 0 30px 0 30px;
+    color: #ffffff;
+    margin: 0px 30px;
+}
+
+    .login-list div > a {
+        color: #ffffff;
+    }
+
+.student-login {
+    background-color: #faab5e;
+}
+
+.employer-login {
+    background-color: #967bdc;
+    margin-left: 15px;
+}
+
+.insider-login {
+    background-color: #4eb683;
+    margin-left: 15px;
+}
+
+.user-type {
+    font-size: 18px;
+}
+
+.login-btn {
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-list div:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.users-login .login-list:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*日历样式*/
+.calendar {
+    width: 301px;
+    margin-top: 30px;
+}
+
+#iCalendar {
+    width: 480px;
+    background-color: #fcfcfc;
+    border: 1px solid #cccccc;
+}
+
+    #iCalendar .date-header {
+        height: 56px !important;
+        line-height: 56px !important;
+        border-bottom: 1px solid #e8e8e8;
+        background-color: #005bac;
+    }
+
+    #iCalendar .left-btn, #iCalendar .right-btn {
+        height: 56px !important;
+        line-height: 56px !important;
+    }
+
+    #iCalendar .left-btn {
+        background: url(../../Shared/images/images-public/leftArrow.png) no-repeat center center !important;
+    }
+
+    #iCalendar .right-btn {
+        background: url(../../Shared/images/images-public/rightArrow.png) no-repeat center center !important;
+    }
+
+#iCalendar {
+    padding: 0 !important;
+    border-radius: 4px;
+}
+
+    #iCalendar a.dayon {
+        line-height: 21px;
+    }
+
+.date-header > div {
+    display: inline-block;
+    color: #333333;
+}
+
+#iCalendar > b {
+    margin: 2px 7px 0px 10px !important;
+    color: #2e2e2d !important;
+}
+
+#iCalendar > .dateBox > b, #iCalendar > .dateBox > a {
+    margin: 0px 1px 2px 2px !important;
+    width: 27px !important;
+    height: 27px !important;
+}
+
+#iCalendar #date-cap {
+    color: #ffffff;
+    font-size: 18px;
+    height: 56px !important;
+    line-height: 56px !important;
+}
+
+.calendarBox {
+    height: 50px;
+    line-height: 50px;
+}
+
+    .calendarBox > img {
+        margin: -4px 12px 0 6px;
+    }
+
+.dateBox {
+    margin: 4px 6px 4px 6px;
+    /*border-top:none;*/
+}
+
+
+.calendarTitle {
+    font-size: 18px;
+}
+
+
+
+
+#iCalendar .day.dayon {
+    color: #fff;
+}
+
+.tablist-inner{
+    margin-top:30px;
+}
+.innerActivity {
+    margin-top:30px;
+}
+/*table样式*/
+.tablist-panel > div > ul {
+    margin-top: 10px;
+}
+
+
+.articlesimplelist-infoPoint, .departmentsimplelist-infoPoint, .positionsimplelist-infoPoint, .milkroundsimplelist-infoPoint, .campustalksimplelist-infoPoint, .positionbriefsimplelist-infoPoint {
+    width: 6px;
+    height: 6px;
+    margin-top: 12px;
+    background-color: #999999;
+}
+
+.articlesimplelist-infoTitle a, .positionsimplelist-infoTitle a, .milkroundsimplelist-infoTitle a, .campustalksimplelist-infoTitle a, .departmentsimplelist-infoTitle a, .positionbriefsimplelist-infoTitle a {
+    font-size: 14px;
+    color: #333333;
+    margin-left: 10px;
+}
+
+.articlesimplelist-infoTime, .positionsimplelist-infoTime, .positionbriefsimplelist-infoTime, .departmentsimplelist-infoTime {
+    font-size: 14px;
+    color: #333333;
+    float: right;
+}
+
+.articlesimplelist-infoTitle, .positionsimplelist-infoTitle, .departmentsimplelist-infoTitle, .positionbriefsimplelist-infoTitle {
+    height: 30px;
+    line-height: 30px;
+}
+/*新闻*/
+#tablist .tablist-title > span > img,
+#tablist-2 .tablist-title > span > img,
+#tablist-3 .tablist-title > span > img,
+#tablist-4 .tablist-title > span > img,
+#tablist-5 .tablist-title > span > img,
+#tablist-6 .tablist-title > span > img {
+    margin: -5px 20px 0 0;
+}
+.tablist-title {
+    height: 50px;
+    width: 120px;
+    line-height: 50px;
+    font-size: 18px;
+}
+.tablist-header {
+    width:380px;
+    height: 50px;
+}
+#tablist-3 {
+    margin-left: 45px;
+}
+/*#tablist .tabTitle-active {
+    color: #ffffff;
+    background-color: #b11c17;
+}*/
+/*招聘信息*/
+#tablist-3{
+    margin-left:45px;
+}
+
+#tablist-3 .tabTitle-active {
+    color: #005bac;
+}
+
+#tablist-3 .tablist-panel:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+#tablist-3 .tablist-panel li:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+#tablist-3 .tablist-panel > div > ul:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+     .positionbriefsimplelist-infoTitle>a,.positionsimplelist-infoTitle>a,.departmentsimplelist-infoTitle>a {
+        line-height: 30px;
+        max-width: 255px;
+    }
+.articlesimplelist-infoTitle > a{
+    max-width:230px;
+}
+#tablist-3 .tablist-panel li > div {
+    float: left;
+}
+
+    #tablist-3 .tablist-panel li > div > span {
+        line-height: 30px;
+        color: #666666;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+/*宣讲会*/
+#tablist-4 {
+    margin-left: 45px;
+}
+
+
+    .tabTitle-active {
+        color: #005bac;
+    }
+
+    #tablist-4 .tablist-panel:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+
+    #tablist-4 .tablist-panel li:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+
+    #tablist-4 .tablist-panel > div > ul:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+
+    #tablist-4 .tablist-panel .milkroundsimplelist-infoTitle, .campustalksimplelist-infoTitle {
+        margin-top: 10px;
+        float: left;
+        width: 380px;
+        height: 44px;
+    }
+
+    #tablist-4 .departmentsimplelist-infoTitle {
+        width: 380px;
+        float: left;
+    }
+
+    #tablist-4 .departmentsimplelist-info:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+
+    #tablist-4 .departmentsimplelist-infoTitle a {
+        width: 360px;
+    }
+
+    #tablist-4 .tablist-panel li > div {
+        float: left;
+    }
+
+        #tablist-4 .tablist-panel li > div > span {
+            line-height: 20px;
+            color: #666666;
+            font-size: 12px;
+            margin-left: 10px;
+            width: 287px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    #tablist-4 .milkroundsimplelist-infoTime, .campustalksimplelist-infoTime {
+        width: 72px;
+        height: 44px;
+        background-color: #f3f3f3;
+        color: #005bac;
+        text-align: center;
+    }
+
+    #tablist-4 .milkroundsimplelist-infoTime-day, .campustalksimplelist-infoTime-day {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: bold;
+    }
+
+    #tablist-4 .milkroundsimplelist-infoTime-month, .campustalksimplelist-infoTime-month {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+.milkroundsimplelist-infoTitle a, .campustalksimplelist-infoTitle a {
+    font-size: 16px;
+    max-width: 257px;
+}
+/*就业政策*/
+
+#tablist-5 {
+}
+
+    #tablist-5 .tabTitle-active {
+        color: #005bac;
+    }
+/*生源信息*/
+#tablist-6 {
+    margin-left: 45px;
+}
+    .tablist-title {
+        height: 50px;
+        width: 120px;
+        line-height: 50px;
+        font-size: 18px;
+    }
+
+    #tablist-6 .tabTitle-active {
+        color: #005bac;
+    }
+
+.tablist-panel > div {
+    position: relative;
+    padding: 0 !important;
+}
+
+.more {
+    position: absolute;
+    top: -42px;
+    right: 20px;
+}
+
+    .more > a {
+        color: #666666;
+        font-size: 14px;
+    }
+
+.tablist-content .tablist-inner:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+#tablist-8,#tablist-9{
+    margin-left:30px;
+}
+#tablist-7 .tablist-content,
+#tablist-8 .tablist-content,
+#tablist-9 .tablist-content {
+    border-bottom: 1px solid #dddddd;
+    width:380px;
+    height:50px;
+}
+#tablist-7 .articlesimplelist-infoTitle a,
+#tablist-8 .articlesimplelist-infoTitle a,
+#tablist-9 .articlesimplelist-infoTitle a{
+
+}
+/*广告展示位*/
+.sliderSpace-container {
+    width: 321px;
+    float: left;
+    margin-left: 25px;
+}
+
+    .sliderSpace-container .sliderSpace-header {
+        width: 301px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        color: #005bac;
+        border-bottom: 1px solid #dddddd;
+        margin-left: 20px;
+    }
+
+    .sliderSpace-container > .slider-main > div {
+        width: 321px;
+        height: 260px;
+        margin-top: 10px;
+    }
+
+        .sliderSpace-container > .slider-main > div > a {
+            width: 140px;
+            height: 110px;
+            display: block;
+            margin: 20px 0 0 20px;
+            float: left;
+        }
+
+
+
+/*底部轮播图*/
+.sliderBottom-container{
+    margin-top:20px;
+}
+.sliderBottom-container .job-guide {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 48px;
+}
+
+.sliderBottom-container .slick-slide {
+    width: 180px !important;
+    height: 100px;
+    margin-left: 18px;
+}
+
+.sliderBottom-container .slider-main {
+    margin-top: 30px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*友情链接样式*/
+.friendlinkpanel-content {
+    margin-bottom: 30px;
+}
+
+
+
+/*#loginBtn {
+    float: right;
+    cursor: pointer;
+    width: 200px;
+    height: 80px;
+    padding: 25px 20px;
+    text-align: right;
+}
+#loginBtn img {
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}*/
+#nameSpace {
+    float: right;
+    width: 200px;
+    height: 80px;
+    padding: 25px 20px;
+    text-align: right;
+    line-height: 30px;
+}
+
+#exit {
+    cursor: pointer;
+    color: #999999;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.top-search {
+    position: relative;
+}
+
+    .top-search img {
+        border: none !important;
+        height: 25px;
+        position: absolute;
+        right: 10px;
+        top: 27px;
+        cursor: pointer;
+    }
+
+
+
+#logins li {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+}
+
+
+
+
+.layout-top .top:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/*底部栏*/
+.layout-bottom {
+    margin-top: 40px;
+}
+
+.bottom-container {
+    height: 281px;
+    background-image: url(../images/images-footer/bottom.png);
+    background-size: 100% 100%;
+    padding-top: 48px;
+}
+
+.bottom-inner {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100px;
+    margin-top: 44px;
+}
+
+    .bottom-inner > div {
+        height: 100px;
+        color: #ffffff;
+    }
+
+    .bottom-inner:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+
+.bottom-logo {
+    width: 452px;
+    float: left;
+    padding-top: 9px;
+}
+
+.contact-info {
+    width: 410px;
+    float: left;
+    padding-left: 106px;
+}
+
+    .contact-info .contactUs {
+        font-size: 14px;
+    }
+
+        .contact-info .contactUs > li {
+            list-style-type: square;
+            margin-top: 6px;
+        }
+
+        .contact-info .contactUs .contactTel {
+            margin-top: 0;
+        }
+
+.download {
+    float: left;
+    padding-left: 90px;
+}
+
+    .download:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+    .download img {
+        float: left;
+        width: 83px;
+        height: 83px;
+    }
+
+    .download .QRcode-intro {
+        float: left;
+        font-size: 14px;
+        margin: 0 0 0 20px;
+        line-height: 26px;
+    }
+
+.bottom-copyright {
+    height: 60px;
+}
+
+.copyright-inner {
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 60px;
+}
+
+    .copyright-inner:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+
+    .copyright-inner img {
+        float: right;
+        margin-top: 13px;
+    }
+
+
+
+.bottom-container .friendlink-group {
+    width: 1200px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+    .bottom-container .friendlink-group > span {
+        position: absolute;
+        left: 0;
+        font-size: 16px;
+        color: #ffffff;
+    }
+
+.friendlink-group > div {
+    float: left;
+}
+
+.friendlink-group .outside-link {
+    margin-left: 20px;
+}
+
+.friendlink-group .inside-link {
+    margin-left: 40px;
+}
+
+.friendlink-group > div:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.friendlinksimple-main {
+    cursor: pointer;
+    float: left;
+    width: 270px !important;
+    position: relative;
+    height: 40px !important;
+    background-color: #ffffff !important;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    color: #666666;
+    margin: 0 0 0 130px !important;
+    /*text-align:left !important;
+    background:url(../images/images-footer/toggleDown.png) no-repeat 245px;
+    padding:0 17px;*/
+}
+
+    .friendlinksimple-main ul {
+        width: 268px !important;
+        position: absolute;
+        bottom: 40px !important;
+        left: 0 !important;
+        z-index: 99999;
+        display: none;
+        box-shadow: -1px -1px 2px #cccccc;
+    }
+
+        .friendlinksimple-main ul li {
+            line-height: 30px !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 268px !important;
+            white-space: nowrap;
+            font-size: 14px;
+            text-align: center;
+            padding: 0 17px;
+        }
+
+            .friendlinksimple-main ul li a {
+                color: #ffffff !important;
+            }
+
+.friendlink-group:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+
+
+/*一站式*/
+.oneStop-service {
+    float: left;
+    width: 303px;
+    margin-left: 45px;
+}
+
+    .oneStop-service .oneStop-header {
+        width: 301px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        color: #005bac;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .oneStop-service .oneStop-content {
+        padding: 0 35px;
+        margin-top: 40px;
+        width: 301px;
+        height: 275px;
+        border: 1px solid #dddddd;
+    }
+
+        .oneStop-service .oneStop-content > img {
+            margin-top: 30px;
+        }
+
+.oneStop-content .oneStop-guides a {
+    display: block;
+    width: 200px;
+    height: 34px;
+    margin: 10px 0 0 30px;
+}
+
+.oneStop-content .oneStop-guides .student-guide {
+    background: url(../images/images-middle/student-guide.png) no-repeat;
+}
+
+.oneStop-content .oneStop-guides .employer-guide {
+    background: url(../images/images-middle/employer-guide.png) no-repeat;
+}
+
+.oneStop-content .oneStop-userType {
+    margin-top: 20px;
+    padding-left: 14px;
+}
+
+    .oneStop-content .oneStop-userType a {
+        display: inline-block;
+        width: 105px;
+        height: 56px;
+    }
+
+    .oneStop-content .oneStop-userType .oneStop-student {
+        background: url(../images/images-middle/oneStop-student.png) no-repeat;
+    }
+
+    .oneStop-content .oneStop-userType .oneStop-employer {
+        background: url(../images/images-middle/oneStop-employer.png) no-repeat;
+    }
+/*侧边固定栏*/
+.fixed-module {
+    position: fixed;
+    bottom: 100px;
+    right: 17px;
+}
+
+    .fixed-module .fixed-content {
+        width: 50px;
+        height: 250px;
+        position: relative;
+    }
+
+        .fixed-module .fixed-content .share-module {
+            width: 50px;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+
+.share-module > li {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 13px;
+}
+
+
+.fixedActive {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.share-type {
+    position: absolute;
+    top: 0;
+    right: 52px;
+}
+
+    .share-type > .type-list {
+        display: none;
+        width: 157px;
+        height: 183px;
+    }
+
+.download-code {
+    width: 142px;
+    height: 183px;
+    padding-top: 9px;
+    text-align: center;
+    border-radius: 6px;
+    position: relative;
+}
+
+.telNumber {
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    padding: 0;
+}
+
+    .telNumber > span {
+        font-size: 16px !important;
+    }
+
+.download-code .triangle {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.download-code .tel {
+    position: absolute;
+    top: 20px;
+    right: -15px;
+}
+
+.download-code .wechat {
+    position: absolute;
+    top: 65px;
+    right: -15px;
+}
+
+.download-code .blog {
+    position: absolute;
+    top: 110px;
+    right: -15px;
+}
+
+.download-code .telNum {
+    display: none;
+}
+
+.download-code img {
+    width: 124px;
+    height: 124px;
+}
+
+.download-code span {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 50px;
+}
+
+
+/*宣讲会修改*/
+#tablist-4 .tablist-header .tablist-title:nth-of-type(2){
+    padding-left:15px;
+}
+#tablist-4 .tablist-header .tablist-title:nth-of-type(n+2) {
+    width: 90px;
+}
+
+.aircampustalklist-info .aircampustalklist-infoTitle {
+    display: block;
+    width: 93% !important;
+    height: 120px !important;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.air_campustalk-cont {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.air_campustalk-item .air_campustalk-cont > img {
+    height: 120px;
+}
+
+.aircampustalklist-infoTitle .air_campustalk-text {
+    display: inline-block;
+    width: 135px;
+    padding-top: 10px;
+}
+
+    .aircampustalklist-infoTitle .air_campustalk-text span {
+        overflow: hidden;
+        width: 135px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: inherit;
+    }
+
+#tablist-4 .aircampustalklist-info .more {
+    top: -47px;
+}

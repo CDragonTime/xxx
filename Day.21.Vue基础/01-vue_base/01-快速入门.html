@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box">
+        <h1>{{name}}</h1>
+        <h3 v-text="name"></h3>
+        <h1>{{name+"拼接字符串"}}</h1>
+        <h1>{{name+2324}}</h1>
+        <h1>{{name.split("")}}</h1>
+        <h1>{{name.split("").reverse()}}</h1>
+        <h1>{{name.split("").reverse().join("")}}</h1>
+        <h1>{{name?"不是张三":"是张三"}}</h1>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        let app = new Vue({
+            // 指定dom标签容器的选择器
+            el:"#box",
+            data(){
+                return{
+                    name:"测试用例"
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

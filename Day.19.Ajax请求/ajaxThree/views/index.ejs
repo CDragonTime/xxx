@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* .select{
+            padding: 0 auto;
+        } */
+        .box {
+            width: 200px;
+            height: 20px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <select name="city" id="sheng">
+            <option value="">??????????/</option>
+        </select>
+        <select name="city" id="shi">
+        </select>
+        <select name="city" id="qu">
+        </select>
+    </div>
+</body>
+<script>
+    let sheng = document.getElementById("sheng")
+    let shi = document.getElementById("shi")
+    let qu = document.getElementById("qu");
+
+    $(document).ready(function (e) {
+
+        loadSheng();
+        //加载市
+        loadShi();
+        //加载区
+        loadQu();
+    });
+
+</script>
+
+</html>

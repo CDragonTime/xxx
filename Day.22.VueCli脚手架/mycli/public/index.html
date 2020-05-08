@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      *{margin: 0;padding: 0;}
+      /* #app{background-color: rgb(235,235,234,0.3);} */
+    </style>
+  </head>
+  <body>
+    <h1 style="background-color: gold; text-align: center;">我是index.html，我是webpack默认调用的页面，用无法改变，不是组件</h1>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <!-- 根组件编译后加载 -->
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

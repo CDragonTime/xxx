@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <!-- 在父组件中使用子组件，传递给子组件值，使用属性 -->
+        <son1></son1>
+    </div>
+<hr>
+<hr>
+<hr>
+    <template id="son1">
+        <div>
+            <h1>这是一个子组件</h1>
+            <h2>{{name}}</h2>
+            <h2>{{"接收来的参数:"+xx}}</h2>
+            <button @click="show">按钮</button>
+        </div>
+    </template>
+    <script src="./01-vue_base/js/vue.js"></script>
+    <script>
+        // 子组件
+        let son1 = {
+            template:"#son1",
+            data(){
+                return{
+                    name:"我是子组件的name",
+                    // 要想修改传过来的数据，并且只修改子组件本身的数据
+                    data:this.xx
+                }
+            },
+            // 通过props接受参数，指定参数类型,接受了参数就可以在子组件中使用
+            props:{
+                // xx:String        
+                //使用这种方式如果添加了require=true，就意思数据必须要传过来
+                xx:{type:String,default:"使用默认数据"}
+            },
+            methods:{
+                show(){
+                    // 使用this调用
+                    console.log(this.xx);
+                    alert(this.xx);
+                }
+            }
+        }
+        // 根组件
+        let app = new Vue({
+            el:"#box",
+            data(){
+                return{
+                    name:"测试名字",
+                    test:"测试"
+                }
+            },
+            components:{
+                son1,
+            }
+        });
+
+    </script>
+</body>
+</html>

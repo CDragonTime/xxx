@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="province">
+    </select>
+    <select name="" id="city">
+        <option value="">请选择市</option>
+    </select>
+    <select name="" id="country">
+        <option value="">请选择区</option>
+    </select>
+    <button id="test">测试</button>
+</body>
+<script>
+    // 得到所有选择框
+    let province = document.querySelector("#province")
+    let city = document.querySelector("#city")
+    let country = document.querySelector("#country")
+
+    // 使用原生ajax
+    let xhr = new XMLHttpRequest();
+    xhr.open("get", "/province");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // 判断成功后获得请求返回的数据
+            let data = xhr.responseText;
+            console.log(data)
+            let str = "<option value=''>--请选择省--</option>";
+            data = JSON.parse(data);
+            data.forEach((item) => {
+                console.log(item)
+                str += "<option value="+item+">" + item + "</option>";
+            })
+            province.innerHTML = str;
+        }
+    }
+    xhr.send(null);
+
+    province.onchange = function () {
+        let provinceOne = this.value;
+        // alert("?????????")
+        xhr.open("get", "/city?province="+provinceOne);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // 判断成功后获得请求返回的数据
+                let data = xhr.responseText;
+                console.log(data)
+                let str = "<option value=''>--请选择市--</option>";
+                data = JSON.parse(data);
+                data.forEach((item) => {
+                    console.log(item)
+                    str += "<option value="+item+">" + item + "</option>";
+                })
+                city.innerHTML = str;
+            }
+        }
+        xhr.send(null);
+    }
+    
+    city.onchange = function () {
+        let cityOne = this.value;
+        // alert("?????????")
+        xhr.open("get", "/country?city="+cityOne);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // 判断成功后获得请求返回的数据
+                let data = xhr.responseText;
+                console.log(data)
+                let str = "";
+                data = JSON.parse(data);
+                data.forEach((item) => {
+                    console.log(item)
+                    str += "<option value="+item+">" + item + "</option>";
+                })
+                country.innerHTML = str;
+            }
+        }
+        xhr.send(null);
+    }
+
+    document.getElementById("test").onclick = function(){
+        xhr.open("get", "/test");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // 判断成功后获得请求返回的数据
+                let data = xhr.responseText;
+                console.log(data)
+                // data = JSON.parse(data);
+                data.forEach((item) => {
+                    console.log(item)
+                })
+            }
+        }
+        xhr.send(null);
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: normal;
+            color: rgb(70, 68, 68);
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        .w960 {
+            width: 960px;
+            margin: 40px auto;
+            background-color: #ccc;
+        }
+
+        h1 {
+            width: 900px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 30px;
+            border-bottom: 1px solid #020;
+        }
+
+        .w960 ul {
+            margin: 10px;
+        }
+
+        .w960 ul li {
+            margin: 20px;
+        }
+
+        .w960 .footer {
+            /* text-align: center; */
+            text-align: center;
+            width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        .footer a {
+            background-color: #172829;
+            display: inline-block;
+            color: #428bca;
+            height: 25px;
+            line-height: 25px;
+            padding: 0 10px;
+            border: 1px solid #ddd;
+            margin: 0 2px;
+            border-radius: 4px;
+            vertical-align: middle;
+        }
+
+        .footer a:hover {
+            border: 1px solid #428bca;
+        }
+
+        .footer .current {
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+            padding: 0 10px;
+            margin: 0 2px;
+            color: #fff;
+            background-color: #428bca;
+            border: 1px solid #428bca;
+            border-radius: 4px;
+            vertical-align: middle;
+        }
+
+        .footer .disabled {
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+            padding: 0 10px;
+            margin: 0 2px;
+            color: #bfbfbf;
+            background: #f2f2f2;
+            border: 1px solid #bfbfbf;
+            border-radius: 4px;
+            vertical-align: middle;
+        }
+
+        /* .footer p{
+            font-size: 14px;
+            font-weight: normal;          
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="w960">
+        <h1>新闻列表</h1>
+        <ul id="news">
+            <li>
+
+            </li>
+        </ul>
+        <div class="footer">
+            <a class="load" id="load" href="">加载更多</a>
+        </div>
+    </div>
+    <script src="/jquery-1.11.3.min.js"></script>
+    <script>
+        let pageData = 1;
+        function getNews(page) {
+            // 没有取消默认事件导致请求多次
+            // alert("????????????============********8?")
+            $.get("/getNews?pageNum=" + page, function (data) {
+                alert("?????????????")
+                realSize = data.size
+                let all = $("#news").html();
+                data.data.forEach(item => {
+                    all += `
+                <li>
+                <h3><a href="">${item.title}</a></h3>
+                <p>${item.date}</p>
+                <p>${item.describe}</p>
+                    </li>`
+                })
+                $("#news").html(all);
+            })
+        }
+        getNews(pageData);
+        $("#load").on("click",function(e){
+            e.preventDefault();
+            pageData++;
+            getNews(pageData);
+        })
+    </script>
+</body>
+
+</html>

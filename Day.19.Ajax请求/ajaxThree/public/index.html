@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* .select{
+            padding: 0 auto;
+        } */
+        .box {
+            width: 600px;
+            height: 20px;
+            margin: 100px auto;
+        }
+        .box select{
+            height: 20px;
+            width: 140px;
+            height: 26px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <select name="city" id="sheng">
+
+        </select>
+        <select name="city" id="shi">
+            <option value="">--市--</option>
+        </select>
+        <select name="city" id="xian">
+            <option value="">--区--</option>
+        </select>
+    </div>
+</body>
+<script src="./jquery-1.11.3.min.js"></script>
+<script>
+    // 加载省份
+    $.get("/province", function (data) {
+        console.log(data)
+        console.log(data.length)
+        var str = '<option value="">--请选择省份--</option>'
+        for (let i = 0; i < data.length; i++) {
+            str += "<option value='" + data[i] + "'>" + data[i] + "</option>";
+        }
+        $("#sheng").html(str)
+    })
+
+    // 加载市
+    $("#sheng").change(function () {
+        // alert("????")
+        $.get("/city?province=" + this.value, function (data) {
+            console.log(data)
+            console.log(data.length)
+            var str = ''
+            for (let i = 0; i < data.length; i++) {
+                str += "<option value='" + data[i] + "'>" + data[i] + "</option>";
+                $.get("/xian?city=" + data[0], function (data) {
+                    console.log(data)
+                    console.log(data.length)
+                    var str = ''
+                    for (let i = 0; i < data.length; i++) {
+                        str += "<option value='" + data[i] + "'>" + data[i] + "</option>";
+                    }
+                    console.log(str)
+                    $("#xian").html(str)
+                })
+            }
+            $("#shi").html(str)
+        })
+    })
+    // 加载县
+    $("#shi").change(function () {
+        // alert("????")
+        $.get("/xian?city=" + this.value, function (data) {
+            console.log(data)
+            console.log(data.length)
+            var str = ''
+            for (let i = 0; i < data.length; i++) {
+                str += "<option value='" + data[i] + "'>" + data[i] + "</option>";
+            }
+            console.log(str)
+            $("#xian").html(str)
+        })
+    })
+</script>
+
+</html>

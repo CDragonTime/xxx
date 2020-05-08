@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="test" v-html="html"></div>
+    <p>绑定并解析一个html文件</p>
+
+    <script src="./js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:".test",
+            data(){
+                return{
+                    test1:"测试用例1",
+                    html:"<h1>测试数据绑定</h1>"
+                }
+            }
+        });
+    </script>
+</body>
+</html>

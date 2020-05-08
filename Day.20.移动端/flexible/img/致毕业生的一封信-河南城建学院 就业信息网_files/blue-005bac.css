@@ -1,0 +1,381 @@
+﻿@charset "UTF-8";
+/*
+    主题颜色控制模板
+
+    主题色：#005bac 蓝
+    辅助色：#a9cdf1 浅蓝
+    对比色：#fd9322 橘黄
+    强调色：#ff0000 红
+    测试色：##00FF00 绿
+*/
+/*活动页*/
+.activity .list_number > .list > .number {
+  color: #005bac; }
+
+.activity .news > .news_title {
+  color: #005bac; }
+
+.activity .tabs > .tablist > .tabs_active {
+  color: #005bac; }
+
+.activity .position_left > .send {
+  background-color: #005bac; }
+
+.activity .statistics_inner > div > .number {
+  color: #005bac; }
+
+/*问卷调查*/
+.question_name > a {
+  color: #005bac; }
+
+/*分页*/
+.pagination > li > a {
+  color: #005bac;
+  background-color: #fff;
+  border: 1px solid #ddd; }
+
+.pagination > .active > a {
+  color: #fff;
+  background-color: #005bac;
+  border-color: #005bac; }
+
+.pagination > .active > a:hover {
+  color: #fff;
+  background-color: #005bac;
+  border-color: #005bac; }
+
+.pageTotal > span {
+  color: #005bac; }
+
+.pageTotal > .pageAffirm {
+  background-color: #005bac; }
+
+/*弹框  预约招聘会按钮*/
+#finish {
+  background-color: #005bac; }
+
+/*筛选按钮*/
+#filter {
+  background-color: #005bac; }
+
+/*咨询预约*/
+#modalCalender .bthGroup #affirm {
+  background-color: #005bac; }
+
+#modalCalender .on {
+  background-color: #005bac; }
+
+/*生源速览技能标签*/
+.skill > span {
+  background-color: #005bac; }
+
+/*在线招聘*/
+.company-left .l-position:hover {
+  color: #005bac; }
+
+.company-right > a {
+  color: #005bac; }
+
+/*
+  招聘会宣讲会  CampustalkDetail ------------------------------------------------------------------------------------
+*/
+.stu_btn {
+  background: #005bac; }
+
+.com_btn {
+  background: #fd9322; }
+
+.job_content .jobs .jobsList .listRight > button {
+  background-color: #005bac; }
+
+/*在线问答*/
+#yinFrame .questionsBox .questionsSubmit .submitBtn {
+  background-color: #005bac; }
+
+#yinFrame .Allquestions .questionsList li .checkReply {
+  background-color: #005bac; }
+
+/*查看详情弹框*/
+#consultModal .modalBox .replyTitle {
+  background-color: #005bac; }
+
+/*院系机构*/
+#faculty .faculty-name > span {
+  color: #005bac; }
+
+#faculty .faculty-title {
+  border-left: 3px solid #005bac; }
+
+#majorContent > .majorDetails {
+  border-left: 3px solid #005bac; }
+
+#majorContent > .majorDetails > .majorName {
+  color: #005bac; }
+
+/*联系我们*/
+.profileTitle span {
+  color: #005bac; }
+
+.profileContent .schoolInfo .schoolLogo span {
+  background-color: #005bac; }
+
+/*
+  企业详情页  conpanyDetail ---------
+*/
+.com_detail_top .top-title span {
+  color: #005bac; }
+
+.com-intro .com_detail_title span {
+  border-bottom: 2px solid #005bac; }
+
+.com-position .com_detail_title span {
+  border-bottom: 2px solid #005bac; }
+
+.plate .com_detail_title span {
+  border-bottom: 2px solid #005bac; }
+
+.details-info .infoLabel > .details-label {
+  background-color: #005bac; }
+
+.r-positions {
+  border-left: 4px solid #005bac; }
+
+.r-positions .p-right .check a {
+  color: #005bac; }
+
+.pay {
+  color: #fd9322; }
+
+.p-left .po span.p-black.pp {
+  color: #005bac; }
+
+.p-left .po span.p-red {
+  color: #ff0000; }
+
+/*
+  企业详情页  conpanyDetail ---------
+*/
+#centerFrame .box .box-content .content-title .title {
+  color: #005bac; }
+
+.navLine span {
+  color: #005bac; }
+
+#submitBtn {
+  background: #005bac; }
+
+.placeBtn {
+  background: #005bac; }
+
+#inviteBtn {
+  background: #005bac; }
+
+#errorDiv {
+  color: #ff0000; }
+
+#companyloginBtn {
+  background: #005bac; }
+
+#weekSelector {
+  background: #f0f0f0; }
+
+#weekSelector button {
+  color: #005bac; }
+
+#weekSelector .selectBtn {
+  background: #005bac; }
+
+/*
+  院系页  faculty ---------
+*/
+.yinLeft .jianbian {
+  height: 64px;
+  background-color: #005bac; }
+
+/*
+  企业列表 position页  position ---------
+*/
+/*.navLine .fabu {
+    background: #005bac;
+    上方已出现
+}*/
+.navLine span {
+  color: #005bac; }
+
+.companyInfo .ctime {
+  color: #ff0000; }
+
+/*
+  职位详情页  positionDetail ---------
+*/
+#centerFrame .box .box-title span {
+  color: #005bac; }
+
+.details-left .job-level .pay-level {
+  color: #ff0000; }
+
+.details-left .job-info button {
+  background-color: #005bac; }
+
+.collect .collect-btn {
+  border: 1px solid #005bac; }
+
+.collect .collect-btn {
+  color: #005bac; }
+
+.collect .send-btn {
+  background-color: #005bac; }
+
+.job-information .info-title span {
+  border-left: 6px solid #005bac; }
+
+.job-description .describe-title span {
+  border-left: 6px solid #005bac; }
+
+/*
+  招聘会列表页  milkroundList ---------
+*/
+.inner_top .font-left {
+  float: left;
+  width: 3px;
+  height: 30px;
+  background-color: #005bac; }
+
+/*
+  文章详情页  newsDetail ---------
+*/
+/*
+  文章列表页  newsList ---------
+*/
+.jianbian {
+  background: #005bac; }
+
+.yinRightContains li a:hover {
+  color: #005bac; }
+
+.yinRightContains .red {
+  color: #ff0000; }
+
+.yinRightTitle span {
+  color: #005bac; }
+
+/*宣讲会*/
+.panelBox .tab_header .click {
+  color: #005bac; }
+
+/*
+  档案查询页  record ---------
+*/
+.box .box-title .title {
+  color: #005bac; }
+
+.input-query .btn {
+  background-color: #005bac; }
+
+.pages li > span.current {
+  background: #005bac;
+  color: #fff;
+  border-color: #005bac; }
+
+/*
+  学校介绍/关于我们  School_Profile ---------
+*/
+.workInfo {
+  border-left: 3px solid #005bac; }
+
+/*
+  企业审核结果  School_Profile ---------暂时移除
+*/
+/*
+  生源概况  Survey ---------
+*/
+/*.yinLeft .jianbian {    
+    background-color: #005bac;
+    上方已存在
+}*/
+.yinLeft .on div a:hover {
+  background: #a9cdf1; }
+
+/*
+  组件部分
+*/
+/*
+  日历组件部分  calendar---------
+*/
+.today {
+  color: #005bac !important; }
+
+.day-info {
+  border: 1px solid #fd9322; }
+
+.day-info a {
+  color: #005bac; }
+
+.day-info a:hover .calenderRight {
+  color: #fd9322; }
+
+/*
+  面包屑组件部分  ---------
+*/
+.breadcrumb a {
+  color: #005bac; }
+
+/*
+  面包屑组件部分 ---------
+*/
+.breadcrumb a {
+  color: #005bac; }
+
+/*
+  友情链接面板组件部分  ---------
+*/
+.friendlinkpanel-titelContainer > span {
+  color: #005bac;
+  border-left: 6px solid #005bac; }
+
+/*
+  导航组件部分  ---------
+*/
+.nav-tab {
+  color: #005bac; }
+
+.nav-dropdown li {
+  background: #005bac;
+  border: 1px solid #005bac; }
+
+.nav-tab span:hover {
+  width: 130px;
+  height: 64px;
+  margin-top: 2px;
+  background: #a9cdf1; }
+
+/*
+  左侧导航组件部分  ---------
+*/
+.pagenav-PageNav-active a {
+  color: #005bac !important; }
+
+.pagenav-parent {
+  background: #005bac; }
+
+/*
+  公共样式部分  ---------
+*/
+.userType span.userTypeActive {
+  color: #005bac; }
+
+.modalBox .modalBox-left .userType a {
+  color: #005bac; }
+
+.modalBox .modalBox-right .right-title {
+  color: #005bac; }
+
+.modalBox .modalBox-right .buttonBox .modalBtn-color {
+  background-color: #005bac; }
+
+.modalBox .modalBox-right .inputBox .modalBtn-color {
+  background-color: #005bac; }
+
+/*
+    tab切换---------
+*/

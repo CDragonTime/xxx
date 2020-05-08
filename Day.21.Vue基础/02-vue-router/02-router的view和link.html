@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../01-vue_base/js/vue.js"></script>
+    <script src="../01-vue_base/js/vue-router.js"></script>
+    <style>
+        .app{
+            width: 100%;
+            background-color: burlywood;
+            height: 600px;
+        }
+        .header{
+            margin: 0 auto;
+            width: 960px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+        .bottom{
+            margin: 0 auto;
+            margin-top: 400px;
+            width: 960px;
+            height: 100px;
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="app">
+        <h1>我是根组件</h1>
+        <div id="header" class="header">
+            <h1>我是header</h1>
+        </div>
+        <div id="bottom" class="bottom">
+            <h1>我是bottom</h1>
+        </div>
+    </div>
+    <script>
+        let header = {
+            template:"#header"
+        }
+        let bottom = {
+            template:"#bottom"
+        }
+        let header = {
+            template:"#some"
+        }
+
+        let vm = new Vue({
+            el: "#app",
+            data() {
+                return {
+
+                }
+            },
+            components: {
+                header,
+                bottom
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

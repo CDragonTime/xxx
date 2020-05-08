@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box">
+        <h1>{{name}}</h1>
+        <h3></h3>
+        <p>请输入宽度</p>
+        <input type="text" v-model="width">
+        <p>请输入长度</p>
+        <input type="text" v-model="height">
+
+        <!-- 计算属性有缓存！！！！！！！方法没有 -->
+        <!-- 函数比较敏感，容易产生不必要的调用，因此尽量使用计算属性 -->
+        <!-- 计算属性默认调用get 直接写函数就是直接使用get没有set-->
+        <p>面积为{{area1}}</p>
+        <p>面积为{{area}}</p>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        let app = new Vue({
+            // 指定dom标签容器的选择器
+            el:"#box",
+            data(){
+                return{
+                    name:"测试用例",
+                    width:0,
+                    height:0
+                }
+            },
+            computed:{
+                area(){
+                    return this.width*this.height;
+                },
+                // 等价
+                area1:{
+                    get(){
+                        return this.width*this.height;
+                    },
+                    set(){
+
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

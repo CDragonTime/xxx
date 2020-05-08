@@ -1,0 +1,195 @@
+/* ================== 特殊样式的处理 */
+body{
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    font-size: 14px;
+    margin: 0 auto;
+    font-family: -apple-system, Helvetica, sans-serif;
+    font-size: #666;
+}
+*{
+    margin: 0; 
+    padding: 0;
+    /* 有些标签点击会有高亮效果 设置transparent 就可以去掉了 */
+    -webkit-tap-highlight-color: transparent;
+}
+input{
+    /* 给按钮加样式，特别是在IOS系统，这个属性必须加的 */
+    -webkit-appearance: none;
+}
+img,a { 
+    /* 禁用长按页面时弹出的菜单 */
+    -webkit-touch-callout: none; 
+}
+
+div{
+    /* 在移动端都使用新的盒子模型 */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+img{
+    vertical-align: middle;
+}
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+/* =================== top 样式 */
+.top{
+    height: 45px;
+}
+.top ul li{
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+}
+.top ul li:nth-child(1){
+    width: 8%;
+}
+.top ul li:nth-child(1) img{
+    width: 10px;
+}
+.top ul li:nth-child(2){
+    width: 10%;
+}
+.top ul li:nth-child(2) img{
+    width: 30px;
+    vertical-align:  middle;
+}
+.top ul li:nth-child(3){
+    width: 57%;
+}
+.top ul li:nth-child(4){
+    background-color: #f63515;
+    width: 25%;
+}
+
+/* =================== search 样式 */
+.search-wrap{
+    position: fixed;
+    width: 100%;
+    height: 44px;
+    min-width: 320px;
+    max-width: 640px;
+    /* background-color: gold; */
+}
+
+.search-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 44px;
+}
+
+.search-btn::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 18px;
+    background: url("../imgs/s-btn.png") no-repeat;
+    background-size: 20px 18px;
+    margin: 15px 0 0 15px;
+}
+
+.search-login{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 44px;
+    color: #fff;
+    line-height: 44px;
+}
+.search{
+    position: relative;
+    height: 30px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin: 0 50px;
+    margin-top: 7px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+.search .jd-icon{
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top:8px;
+    left: 10px;
+    background: url("../imgs/jd.png") no-repeat;
+    background-size: 20px 15px;
+}
+
+.search .jd-icon::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    top:0;
+    right: -10px;
+    background-color: #ccc;
+}
+.slider img{
+    width: 100%;
+}
+
+/* =============== 小家电 */
+.brand{
+    overflow: hidden;
+}
+.brand div{
+    float: left;
+    width: 33.33333%;
+}
+.brand div img{
+    width: 100%;
+}
+/* =============== nav */
+nav{
+    overflow: hidden;
+    padding-top: 5px;
+}
+nav a{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+nav a img{
+    width: 40px;
+    margin: 10px 0;
+}
+nav a span{
+    display: block;
+}
+/* =============== 抽奖 */
+.choujiang{
+    margin-top: 20px;
+}
+
+.choujiang a{
+    float: left;
+}
+.choujiang a:nth-child(1){
+    width: 50%;
+}
+.choujiang a:nth-child(2){
+    width: 25%;
+}
+.choujiang a:nth-child(3){
+    width: 25%;
+}
+
+.choujiang img{
+    width: 100%;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- 在视图中拿data中的数据：直接写就OK了 -->
+    <div id="app">
+        <table border="1">
+            <tr>
+                <th>姓名</th>
+                <th v-for="(item,index) in subjects">{{item}}</th>
+                <th>总分</th>
+            </tr>
+            <tr v-for="(item,index) in scores">
+                <td>{{item.name}}</td>
+                <td v-for="(s,idx) in item.score">{{s}}</td>
+                <td>{{getTotalScore(item.score)}}</td>
+            </tr>
+            <tr>
+                <td>平均分</td>
+                <!-- td>{{getYWAvg()}}</td>
+                <td>{{getSSAvg()}}</td>
+                <td>{{getYYAvg()}}</td> -->
+
+                <!-- <td>{{getAvg(0)}}</td>
+                <td>{{getAvg(1)}}</td>
+                <td>{{getAvg(2)}}</td> -->
+
+                <td v-for="(item,index) in subjects.length">{{getAvg(index)}}</td>
+                <td>{{getTotalScoreAvg()}}</td>
+            </tr>
+        </table>
+
+        <hr>
+        <h1>请输入正确的科目名称:  语文，数学，英语</h1>
+        <input type="text" v-model="index">
+        <h1 v-if="test">{{index}}</h1>
+        <hr>
+        <!-- <input type="text"> -->
+        <div v-for="(item,index) in getNoPass1(index)">{{item.name+"的"+item.subject+"未及格----"+"分数为"+item.sco}}</div>
+        <hr>
+        <hr>
+        <hr>
+        <!-- <h1>数学</h1>
+        <div v-for="(item,index) in getNoPass1(1)">{{item.name+"的"+item.subject+"未及格----"+"分数为"+item.sco}}</div>
+        <hr>
+        <h1>英语</h1>
+        <div v-for="(item,index) in getNoPass1(2)">{{item.name+"的"+item.subject+"未及格----"+"分数为"+item.sco}}</div> -->
+
+        <!-- <span>{{getNoPass()}}</span>
+        <hr> -->
+        <!-- <span v-for="(item,index) in getNoPass()">{{item}}<br></span> -->
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    index: null,
+                    test: false,
+                    subjects: ["语文", "数学", "英语"],
+                    scores: [
+                        { name: "aaa", score: [75, 84, 70] },
+                        { name: "bbb", score: [51, 34, 54] },
+                        { name: "ccc", score: [50, 75, 70] },
+                        { name: "ddd", score: [51, 86, 34] },
+                        { name: "eee", score: [50, 65, 77] },
+                    ]
+                }
+            },
+            methods: {
+                // 在methods中获取data中的数据，需要通过this.xxx获取
+                // 此处的this就是vm
+                getTotalScore(arr) {
+                    return arr.reduce((prev, next) => prev + next)
+                },
+                getTotalScoreAvg() {
+                    // console.log(this.scores)
+                    let total = 0;
+                    this.scores.forEach(item => {
+                        total += this.getTotalScore(item.score)
+                    })
+                    // console.log(total)
+                    return total / this.scores.length;
+                },
+                getAvg(index) {
+                    let arr = this.scores.map(item => item.score[index])
+                    return this.getTotalScore(arr) / this.scores.length;
+                },
+                getNoPass() {
+                    let arr = [];
+                    let string = "";
+                    let pass = this.scores.forEach(item => {
+                        // console.log(item.score)
+                        item.score.forEach((item1, index) => {
+                            // console.log(item1)
+                            if (item1 < 60) {
+                                string = "名字为" + item.name + "----" + this.subjects[index] + "未及格" + "---成绩为" + item1;
+                                arr.push(string)
+                            }
+                        })
+                    })
+                    return arr;
+                },
+
+                // 输入科目获取相应的数据
+                getNoPass1(index) {
+                    switch (index) {
+                        case "语文":
+                            index = 0;
+                            this.test = true;
+                            break;
+                        case "数学":
+                            index = 1;
+                            this.test = true;
+                            break;
+                        case "英语":
+                            index = 2;
+                            this.test = true;
+                            break;
+                        default:
+                            this.test = false;
+                            return;
+                    }
+                    let arr = [];
+                    let pass = this.scores.forEach(item => {
+                        // console.log(item.score.length)
+                        for (let i = 0; i < item.score.length; i++) {
+                            // console.log(item.score[index])
+                            if (i == index) {
+                                if (item.score[index] < 60) {
+                                    console.log(item.name)
+                                    let obj = { name: item.name, subject: this.subjects[index], sco: item.score[index] }
+                                    arr.push(obj);
+                                }
+                            }
+                        }
+                    })
+                    return arr;
+                }
+            }
+        })
+    </script>
+</body>
+
+<!-- <script>
+    // 学一个数组中的方法，叫reduce
+    let arr = [3,2,1,4,5];  // 15
+    // reduce有循环的功能
+    // 第1次循环：prev 是3   next 是2
+    // 第2次循环：prev 是5   next 是1
+    // 第3次循环：prev 是6   next 是4
+    // 第4次循环：prev 是10   next 是5
+    let res = arr.reduce(function(prev, next){
+        console.log(prev,next)
+        return prev+next;  // return 5
+    })
+    console.log(res+"-----------") // 15
+</script> -->
+
+<!-- <script>
+    // map可以对数组中的每一项元素进行计算
+
+    // 再学习一个数组中的方法  map
+    let arr = [3,2,1,4,5];
+    // map有循环的功能
+    let res = arr.map(function(item){
+        // console.log(item)
+        return item*2;
+    })
+    console.log(res); // [6, 4, 2, 8, 10]
+</script> -->
+
+</html>

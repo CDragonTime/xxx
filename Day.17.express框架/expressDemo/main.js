@@ -17,13 +17,13 @@ app.post("/save",user.saveUser)
 
 // 直接用app.开接口
 app.get("/allOrder",user.allOrder)
-app.get("/order/:shoujihao", order.oneOrder)
+// app.get("/order/:shoujihao", user.oneOrder)
 
 app.set("view engine","ejs");
 // 在express中有一个内置的中间件,可以托管静态资源
 app.use(express.static("public"));
 
 
-app.listen(3000,()=>{
-    console.log("服务器在3000端口启动了")
+app.listen(3001,()=>{
+    console.log("服务器在3001端口启动了")
 })

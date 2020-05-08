@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: normal;
+            color: rgb(70, 68, 68);
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        .w960 {
+            width: 960px;
+            margin: 40px auto;
+            background-color: #ccc;
+        }
+
+        h1 {
+            width: 900px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 30px;
+            border-bottom: 1px solid #020;
+        }
+
+        .w960 ul {
+            margin: 10px;
+        }
+
+        .w960 ul li {
+            margin: 20px;
+        }
+
+        .w960 .footer {
+            /* text-align: center; */
+            text-align: center;
+            width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        .footer a {
+            background-color: #172829;
+            display: inline-block;
+            color: #428bca;
+            height: 25px;
+            line-height: 25px;
+            padding: 0 10px;
+            border: 1px solid #ddd;
+            margin: 0 2px;
+            border-radius: 4px;
+            vertical-align: middle;
+        }
+
+        .footer a:hover {
+            border: 1px solid #428bca;
+        }
+
+        .footer .current {
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+            padding: 0 10px;
+            margin: 0 2px;
+            color: #fff;
+            background-color: #428bca;
+            border: 1px solid #428bca;
+            border-radius: 4px;
+            vertical-align: middle;
+        }
+
+        .footer .disabled {
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+            padding: 0 10px;
+            margin: 0 2px;
+            color: #bfbfbf;
+            background: #f2f2f2;
+            border: 1px solid #bfbfbf;
+            border-radius: 4px;
+            vertical-align: middle;
+        }
+
+        /* .footer p{
+            font-size: 14px;
+            font-weight: normal;          
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="w960">
+        <h1>新闻列表</h1>
+        <ul id="news">
+            <li>
+                <h3><a href="">测试新闻1</a></h3>
+                <p>时间</p>
+                <p>描述</p>
+            </li>
+        </ul>
+        <div class="footer">
+            <a class="leftA" id="leftA" href="">上一页</a>
+            <span id="size"></span>
+            <a class="rightA" id="rightA" href="">下一页</a>
+        </div>
+    </div>
+    <script src="/jquery-1.11.3.min.js"></script>
+    <script>
+        let pageData = 1;
+        let realSize = 1;
+        function getNews(page) {
+            $.get("/getNews?pageNum=" + page, function (data) {
+                // console.log(data.pagesize)
+                // console.log(data.total)
+                // console.log(data.size)
+                // console.log(data.data)
+                // alert("???")
+                // alert(realSize)
+                realSize = data.size
+                let all = ""
+                // 展示数据
+                data.data.forEach(item => {
+                    // let time = item.date.toLocaleString();
+                    // console.log(time)
+                    all += `
+                <li>
+                <h3><a href="">${item.title}</a></h3>
+                <p>${item.date}</p>
+                <p>${item.describe}</p>
+                    </li>`
+                })
+                // 加载下面的标签
+                $("#news").html(all)
+                let str = ""
+                for (let i = 1; i <= data.size; i++) {
+                    str += `<a id=a${i}>${i}</a>`
+                }
+                $("#size").html(str)
+                for (let i = 1; i <= data.size; i++) {
+                    $("#a" + i).on("click", function (e) {
+                        // alert("????")
+                        e.preventDefault;
+                        getNews(i);
+                        pageData = i;
+                    })
+                }
+                $("#a"+page).css({ "background": "green"})
+            })
+        }
+        getNews(pageData);
+        $("#rightA").on("click",function(e){
+            e.preventDefault();
+            if(pageData < realSize){
+                getNews(++pageData);
+            }else{
+                alert("已经是最后一页了")
+            }
+        })
+        $("#leftA").on("click",function(e){
+            e.preventDefault();
+            if(pageData > 1){
+                getNews(--pageData);
+            }else{
+                alert("已经是第一页了")
+            }
+        })
+        // $("#rightA").on("click",function(){
+        // })
+    </script>
+</body>
+
+</html>

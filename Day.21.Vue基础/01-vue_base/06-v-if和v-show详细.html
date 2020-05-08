@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box">
+        <!-- v-show="false"浏览器解析后变为style="display: none;" -->
+        <h1 v-show="false">{{name+false}}</h1>
+        <h1 v-show="true">{{name+true}}</h1>
+        <!-- v-if="false"浏览器不会创建此元素 -->
+        <h1 v-if="false">{{name}}</h1>
+        <h1 v-if="true">{{name}}</h1>
+        <h1>{{name}}</h1>
+        <h3 v-text="name"></h3>
+        <!-- 通过输入框判断条件是否成立 -->
+        <input v-model="age">
+        <h1 v-if="age>=60">{{name+"v-if和v-else-if=====================老年人"}}</h1>
+        <h1 v-else-if="age>=40">{{name+"v-if和v-else-if====================种男人"}}</h1>
+        <h1 v-else-if="age>=20">{{name+"v-if和v-else-if=====================还是年轻"}}</h1>
+        <h1 v-else="age">{{name+"v-if和v-else-if==============？？？小"}}</h1>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        let app = new Vue({
+            // 指定dom标签容器的选择器
+            el:"#box",
+            data(){
+                return{
+                    name:"测试用例",
+                    true:true,
+                    false:false,
+                    age:20
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
