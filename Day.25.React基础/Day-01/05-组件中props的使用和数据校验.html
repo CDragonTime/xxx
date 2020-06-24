@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/react.development.js"></script>
+    <script src="./js/react-dom.development.js"></script>
+    <script src="./js/babel.min.js"></script>
+    <script src="./js/prop-types.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        class PropsTest extends React.Component {
+            render() {
+                let { a, b, c } = this.props
+                return (
+                    <div>
+                        <ul>
+                            <li>a的值{a}</li>
+                            {/* react输出对象会报错，输出的只能是基本类型 */}
+                            <li>b的值{b.name}</li>
+                            <li>c的值{c}</li>
+                        </ul>
+                        <PropsFunc  name="张三" age={12} sex="男" />
+                    </div>
+                )
+            }
+        }
+        // 对接收的数据进行校验，校验不通过但也能显示，比如不传a
+        PropsTest.propTypes = {
+            a: PropTypes.string.isRequired,
+            b: PropTypes.object,
+            c: PropTypes.number
+        }
+
+
+        function PropsFunc({name,age,sex}){
+            console.log(this)
+            return (
+                <ul>
+                    <li>姓名：{name}</li>
+                    <li>性别：{age}</li>
+                    <li>年龄：{sex}</li>
+                </ul>
+            )
+        }
+        PropsFunc.propTypes = {
+            name: PropTypes.string.isRequired,
+            age: PropTypes.number,
+            sex: PropTypes.string
+        }
+        
+        // 没有加{}表示传递的字符串
+        ReactDOM.render(<PropsTest  b={{ name: "张三" }} c={12} />, document.getElementById("app"));
+    </script>
+</body>
+
+</html>

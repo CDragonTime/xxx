@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/redux.js"></script>
+</head>
+
+<body>
+    <script>
+        // 1.贮备初始状态
+        let initState = {
+            todo: [
+                { text: "学习react", done: false },
+                { text: "打游戏", done: true },
+                { text: "睡觉", done: false }
+            ],
+            visibility: "all"
+        }
+        // 2.准备actions creator就是根据传参创建对应的action使action中死数据变为活数据
+        function addTodo(text) {
+            // 返回一个action
+            return {
+                type: "ADD_TODO",
+                text
+            }
+        }
+        function toggleTodo(todo) {
+            // 返回一个action
+            return {
+                type: "TOGGLE_TODO",
+                todo
+            }
+        }
+        function setVisibility(flag) {
+            // 返回一个action
+            return {
+                type: "SET_VISIBILITY",
+                flag
+            }
+        }
+
+        // 3.准备管理员
+        function reducer(state = initState, action) {
+            switch (action.type) {
+                case "ADD_TODO":
+                    // 先创造一个装有新todo的数组
+                    var todo = [...state.todo, { text: action.text, done: false }]
+                    // 把新数组合并到原本的对象状态中去
+                    return Object.assign({}, state, { todo })
+                case "TOGGLE_TODO":
+                    var todo = state.todo.map(todo => {
+                        if (todo == action.todo) {
+                            // 找到todo  改变状态
+                            return Object.assign({}, todo, { done: !todo.done })
+                        }
+                        return todo
+                    })
+                    return Object.assign({}, state, { todo })
+                case "SET_VISIBILITY":
+                    return Object.assign({}, state, { visibility: action.flag })
+                default:
+                    return state
+            }
+        }
+
+        // 4.创建仓库store
+        let store = Redux.createStore(reducer)
+
+        // 5.订阅跟踪状态的改变 subscribe
+        store.subscribe((data) => {
+            console.log(data)
+            console.log(store.getState())
+        })
+
+        // 修改状态
+        store.dispatch(addTodo("没有过的"))
+        store.dispatch(addTodo("没有过的1"))
+        store.dispatch(toggleTodo(store.getState().todo[4]))
+        store.dispatch(setVisibility("???"))
+        // store.dispatch(addTodo("没有过的"))
+
+    </script>
+</body>
+
+</html>

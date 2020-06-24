@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="todo-mvc.css">
+</head>
+<body>
+	<section class="todoapp">
+		<header class="header">
+			<h1>todos</h1> 
+			<input type="text" placeholder="what need to be done?" class="new-todo">
+		</header>
+		<section class="main" style="">
+			<input type="checkbox" class="toggle-all"> 
+				<ul class="todo-list">
+					<li class="todo">
+						<div class="view">
+							<input type="checkbox" class="toggle"> 
+							<label>vue.js</label> 
+							<button class="destroy"></button>
+						</div> 
+						<input type="text" class="edit" style="display: none;">
+					</li>
+					<li class="todo completed">
+						<div class="view">
+							<input type="checkbox" class="toggle"> 
+							<label>react</label> 
+							<button class="destroy"></button>
+						</div> 
+						<input type="text" class="edit" style="display: none;">
+					</li>
+				</ul>
+			</section> 
+			<footer class="footer" style="">
+				<span class="todo-count"><strong>1</strong> items left</span> 
+				<ul class="filters">
+					<li><a href="" class="selected">all</a></li>
+					<li><a href="" class="">active</a></li>
+					<li><a href="" class="">completed</a></li>
+				</ul> 
+				<button class="clear-completed">clear completed</button>
+			</footer>
+	</section>
+</body>
+</html>

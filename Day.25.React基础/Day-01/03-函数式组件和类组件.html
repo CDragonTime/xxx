@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入react核心库 -->
+    <script src="./js/react.development.js"></script>
+    <!-- 引入react-dom 用于操作dom -->
+    <script src="./js/react-dom.development.js"></script>
+    <!-- 引入babel 用于解析jsx为js -->
+    <script src="./js/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- 编写jsx因此需要引入babel来解析 -->
+    <script type="text/babel">
+        let h11 = React.createElement("h1", { id: "xxx" }, "hello11");
+        // 创建一个jsx 就是createElement的语法糖
+        let jsxDom = <h1>创建一个h1的jsx</h1>
+        let jsxDom1 = (
+            <div>
+                <h3>写出多行的jsx语法</h3>
+                <h3>写出多行的jsx语法</h3>
+                <h3>写出多行的jsx语法</h3>
+                <h3>写出多行的jsx语法</h3>
+                <F1>组件中间文字不起作用，类形式的变量不适合写到这里</F1>
+            </div>
+        )
+        // 最好将组件函数定义为大写，因为在jsx语法中需要使用大写字母开头的作为组件的识别
+        function F1() {
+            return (
+                <div>
+                    测试函数式组件1，react中的组件不用注册，虽然还不知道原因
+                </div>
+            )
+        }
+        class ClassF1 extends React.Component {
+            // render是一个钩子函数
+            render() {
+                return (
+                    <div>
+                        <h1>
+                            说来也是奇葩，毕竟vue的data中return的是对象
+                            但在react中return但是一个jsx
+                    </h1></div>
+                )
+            }
+        }
+        // 需要react把虚拟DOM渲染到页面上，变成真实DOM
+        ReactDOM.render(<ClassF1 />, document.getElementById("app"));
+    </script>
+</body>
+
+</html>

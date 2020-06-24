@@ -1,0 +1,42 @@
+{
+    "status": 200,
+    "result": {
+        "shopList": [
+            {
+                "shopId": "1001",
+                "shopName": "小米智能手机 全景监控 360全景云台1080P",
+                "shopPrice": 3299,
+                "shopNumber": 1,
+                "shopImage": "https://upload-images.jianshu.io/upload_images/1268909-a40d9c28cb690fa5.jpg"
+            },
+            {
+                "shopId": "1002",
+                "shopName": "lkPhone 64G超高内存 小米智能机",
+                "shopPrice": 7199,
+                "shopNumber": 1,
+                "shopImage": "https://upload-images.jianshu.io/upload_images/1268909-8a7c43a99bbf5225.jpg"
+            },
+            {
+                "shopId": "1003",
+                "shopName": "手动烧水壶 小米出品 你值得拥有",
+                "shopPrice": 99,
+                "shopNumber": 1,
+                "shopImage": "https://upload-images.jianshu.io/upload_images/1268909-f0bcb83af6bf3a6d.jpg"
+            },
+            {
+                "shopId": "1004",
+                "shopName": "小米智能烧水壶 程序员泡茶专用 茶好才有好代码",
+                "shopPrice": 561,
+                "shopNumber": 1,
+                "shopImage": "https://upload-images.jianshu.io/upload_images/1268909-d2dd62acf5dadc15.jpg"
+            },
+            {
+                "shopId": "1005",
+                "shopName": "小米 编程专用 64GB 32GB 发烧笔记本电脑",
+                "shopPrice": 8686,
+                "shopNumber": 1,
+                "shopImage": "https://upload-images.jianshu.io/upload_images/1268909-4b0e53a3c2d99c10.jpg"
+            }
+        ]
+    }
+}

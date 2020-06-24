@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/react.development.js"></script>
+    <script src="./js/react-dom.development.js"></script>
+    <script src="./js/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        class ClassF1 extends React.Component{
+            constructor(props){
+                super(props)
+                // 初始化状态
+                this.state = {
+                    isHot:false
+                }
+                // constructor中的this表示组件对象
+                // call apply bind
+                // call 改变this指定  并让函数执行
+                // apply 和 call一样 只不过传参形式不一样
+                // bind 改变this指向  不会让函数执行
+                // this.clickHandle.bind(this)  让clickHandle中的this指向组件对象
+                // this.clickHandle = this.clickHandle.bind(this)
+            }
+            // react中普通函数使用箭头函数没有this指向的问题
+            changeStatus = ()=>{
+                let {isHot} = this.state
+                this.setState({
+                    isHot:!isHot
+                })
+            }
+            render(){
+                // 直接显示state中的数据和结构出来的在页面显示上没有区别
+                // let {isHot} = this.state
+                return(
+                    <div>
+                    <h1>也需要一个根标签,{this.state.isHot===true?"状态正常":"状态不正常"}</h1>
+                    返回一个jsx的模板
+                    <button onClick={this.changeStatus}>点击切换</button>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<ClassF1/>, document.getElementById("app"));
+    </script>
+</body>
+</html>
